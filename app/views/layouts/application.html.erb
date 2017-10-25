@@ -3,7 +3,10 @@
   <head>
     <title>GoodReads</title>
     <%= csrf_meta_tags %>
-
+    <script type="text/javascript">
+      window.logo = "<%= image_url('better_read_first_draft.png') %>"
+      window.background = "<%= image_url('better_read_background_image_1.jpg') %>"
+    </script>
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>

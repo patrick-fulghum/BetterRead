@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Greetings = ({ currentUser, logout }) => {
+  let location = window.location.href.slice(24);
   if (currentUser) {
     return (
       <div>
@@ -10,12 +11,16 @@ const Greetings = ({ currentUser, logout }) => {
       </div>
     );
   }
-  else {
+  else if (location !== "signup") {
     return (
       <div>
-        <h2>You are not Signed in</h2>
-        <Link to="/login">Login</Link>
         <Link to="/signup">Sign Up</Link>
+      </div>
+    );
+  } else if (location !== "login") {
+    return (
+      <div>
+        <Link to="/login">Login</Link>
       </div>
     );
   }

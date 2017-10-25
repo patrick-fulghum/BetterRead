@@ -42,31 +42,63 @@ class SessionForm extends React.Component {
   }
 
   render() {
+    let path = this.props.location.pathname;
+    let contingentRendering;
+    if (path === "/signup") {
+      contingentRendering = (
+        <div>
+          <div>
+            Already A Member?
+          </div>
+          <Link to="/login">Login</Link>
+        </div>
+      );
+    }
+    else if (path === "/login") {
+      contingentRendering = (
+        <div>
+          <div>
+            Not A Member?
+          </div>
+          <Link to="/signup">Sign Up</Link>
+        </div>
+      );
+    }
     return (
       <div className="formContainer">
-        <form onSubmit={this.handleSubmit} className="formBox">
-          <h1>Welcome to the {this.props.match.path.slice(1)} Page</h1>
+        <form onSubmit={this.handleSubmit} className="form-box">
           {this.renderErrors()}
-          <div className="formLogin">
-            <input
-              type="text"
-              value={this.state.username}
-              onChange={this.update('email')}
-              className="formLoginBox"
-            />
-            <input
-              type="password"
-              value={this.state.password}
-              onChange={this.update('password')}
-              className="formPasswordBox"
-            />
-            <input
+          <div className="form-login">
+            <div className="float-left">
+              <label className='block'>Email Address
+                <input
+                  type="text"
+                  value={this.state.username}
+                  onChange={this.update('email')}
+                  placeholder="you@yours.com"
+                  className="block"
+                  />
+              </label>
+            </div>
+            <div className="float-left">
+              <label className='block'>Password
+                <input
+                  type="password"
+                  value={this.state.password}
+                  onChange={this.update('password')}
+                  className="block"
+                  />
+              </label>
+            </div>
+            <button
               type="submit"
-              value="Submit"
-              className="formSubmissionBox"
-            />
+              className="form-submission-box"
+            >{path.slice(1)}</button>
           </div>
         </form>
+        <div className="top-right">
+          {contingentRendering}
+        </div>
       </div>
     );
   }

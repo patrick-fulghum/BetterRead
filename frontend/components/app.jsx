@@ -5,11 +5,8 @@ import SessionFormContainer from './sessions/session_form_container';
 import AuthRoute from '../api_util/route_util';
 
 const App = () => (
-  <div>
-    <h3>
-      BetterRead
-      <GreetingsContainer />
-    </h3>
+  <div id="ultimate-container">
+    <img className="logo" src={window.logo} />
     <AuthRoute path="/signup" component={SessionFormContainer} />
     <AuthRoute path="/login" component={SessionFormContainer} />
   </div>
