@@ -26,7 +26,7 @@ class SessionForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
-    this.props.determineForm({ user });
+    this.props.processForm( user );
   }
 
   renderErrors() {
@@ -35,7 +35,7 @@ class SessionForm extends React.Component {
         { this.props.errors.map((err, index) => (
           <li key={index}>
             { err }
-          </li>
+            </li>
         ))}
       </ul>
     );
@@ -45,12 +45,13 @@ class SessionForm extends React.Component {
     return (
       <div className="formContainer">
         <form onSubmit={this.handleSubmit} className="formBox">
+          <h1>Welcome to the {this.props.match.path.slice(1)} Page</h1>
           {this.renderErrors()}
           <div className="formLogin">
             <input
               type="text"
               value={this.state.username}
-              onChange={this.update('username')}
+              onChange={this.update('email')}
               className="formLoginBox"
             />
             <input
