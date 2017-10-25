@@ -31,7 +31,7 @@ class SessionForm extends React.Component {
 
   renderErrors() {
     return (
-      <ul>
+      <ul className="form-login">
         { this.props.errors.map((err, index) => (
           <li key={index}>
             { err }
@@ -47,29 +47,35 @@ class SessionForm extends React.Component {
     if (path === "/signup") {
       contingentRendering = (
         <div>
-          <div>
+          <div className="side-by-side">
             Already A Member?
           </div>
-          <Link to="/login">Login</Link>
+          <div className="side-by-side">
+            <Link to="/login" className="link-to-button">Login</Link>
+          </div>
         </div>
       );
     }
     else if (path === "/login") {
       contingentRendering = (
         <div>
-          <div>
+          <div className="side-by-side">
             Not A Member?
           </div>
-          <Link to="/signup">Sign Up</Link>
+          <div className="side-by-side">
+            <Link to="/signup" className="link-to-button">Sign Up</Link>
+          </div>
         </div>
       );
     }
     return (
       <div className="formContainer">
         <form onSubmit={this.handleSubmit} className="form-box">
-          {this.renderErrors()}
-          <div className="form-login">
-            <div className="float-left">
+          <ul className="form-login">
+            <li>
+              {this.renderErrors()}
+            </li>
+            <li className="float-left sign-items">
               <label className='block'>Email Address
                 <input
                   type="text"
@@ -79,8 +85,8 @@ class SessionForm extends React.Component {
                   className="block"
                   />
               </label>
-            </div>
-            <div className="float-left">
+            </li>
+            <li className="float-left sign-items">
               <label className='block'>Password
                 <input
                   type="password"
@@ -89,15 +95,18 @@ class SessionForm extends React.Component {
                   className="block"
                   />
               </label>
-            </div>
+            </li>
             <button
               type="submit"
               className="form-submission-box"
             >{path.slice(1)}</button>
-          </div>
+        </ul>
         </form>
         <div className="top-right">
           {contingentRendering}
+        </div>
+        <div>
+          <img className="footer" src={window.bookrow}></img>
         </div>
       </div>
     );
