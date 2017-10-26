@@ -33,6 +33,12 @@ class LandingPage extends React.Component {
     this.props.signupAction(myUser);
   }
 
+  clearErrors() {
+    if (this.props.errors) {
+      this.props.clearErrors();
+    }
+  }
+
   renderErrors() {
     if (this.props.errors && this.props.location.pathname !== "/login") {
       return (

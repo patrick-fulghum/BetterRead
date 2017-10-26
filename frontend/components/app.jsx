@@ -12,7 +12,6 @@ const App = () => (
     <Route path="/construction" component={Construct} />
     <AuthRoute path="/signup" component={SessionFormContainer} />
     <AuthRoute path="/login" component={SessionFormContainer} />
-    <GreetingsContainer />
   </div>
 );
 
