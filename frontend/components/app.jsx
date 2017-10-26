@@ -8,7 +8,7 @@ import Construct from './construction/construction';
 
 const App = () => (
   <div id="ultimate-container">
-    <Route path="/" component={LandingPageContainer} />
+    <Route exact path="/" component={LandingPageContainer} />
     <Route path="/construction" component={Construct} />
     <AuthRoute path="/signup" component={SessionFormContainer} />
     <AuthRoute path="/login" component={SessionFormContainer} />

@@ -87,7 +87,7 @@ class SessionForm extends React.Component {
                   />
               </label>
             </li>
-            <li>
+            <li className="float-left sign-items">
               <label className='block'>Email Address
                 <input
                   type="text"

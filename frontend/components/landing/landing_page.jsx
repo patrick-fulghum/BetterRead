@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import { Redirect } from 'react-router';
 
 class LandingPage extends React.Component {
@@ -9,6 +9,8 @@ class LandingPage extends React.Component {
       email: "",
       password: "",
       name: "",
+      login: false,
+      signup: false,
     };
     this.handleLogin = this.handleLogin.bind(this);
     this.handleSignup = this.handleSignup.bind(this);
@@ -25,12 +27,14 @@ class LandingPage extends React.Component {
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.props.loginAction(user);
+    this.setState({login: true});
   }
 
   handleSignup(e) {
     e.preventDefault();
     const myUser = Object.assign({}, this.state);
     this.props.signupAction(myUser);
+    this.setState({signup: true});
   }
 
   clearErrors() {
@@ -39,11 +43,17 @@ class LandingPage extends React.Component {
     }
   }
 
-  renderErrors() {
-    if (this.props.errors && this.props.location.pathname !== "/login") {
-      return (
-        <Redirect to="/login" />
-      );
+  redirectToLoginIfErrors() {
+    if (this.props.errors && this.state.login) {
+      this.props.history.push("/login");
+      this.state.login = false;
+    }
+  }
+
+  redirectToSignUpIfErrors() {
+    if (this.props.errors && this.state.signup) {
+      this.props.history.push("/signup");
+      this.state.signup = false;
     }
   }
 
@@ -54,6 +64,11 @@ class LandingPage extends React.Component {
       name: "Guest",
     };
     this.props.loginAction(guest);
+  }
+
+  componentDidUpdate() {
+    this.redirectToSignUpIfErrors();
+    this.redirectToLoginIfErrors();
   }
 
   render() {
@@ -153,9 +168,14 @@ class LandingPage extends React.Component {
             <Link to="/construction">
               <i className="fa fa-users"></i>
             </Link>
-            <Link to="/construction">
-              <i className="fa fa-user-circle" ></i>
-            </Link>
+            <div className="hover-black dropdown">
+              <button className="drop-button">
+                <i className="fa fa-user-circle" ></i>
+              </button>
+              <div className="dropdown-links">
+                <button onClick={ this.props.logoutAction }>Sign out</button>
+              </div>
+            </div>
           </div>
         </div>
       );
@@ -249,6 +269,7 @@ class LandingPage extends React.Component {
       );
     }
   }
+
 }
 
 export default LandingPage;

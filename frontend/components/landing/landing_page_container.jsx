@@ -10,10 +10,12 @@ const mapStateToProps = (state, ownProps) => ({
 const mapDispatchToProps = (dispatch, ownProps) => {
   const loginAction = login;
   const signupAction = signup;
+  const logoutAction = logout;
   return {
     loginAction: user => dispatch(loginAction(user)),
     signupAction: user => dispatch(signupAction(user)),
     clearErrors: () => dispatch(clearErrors()),
+    logoutAction: () => dispatch(logoutAction()),
   };
 };
 

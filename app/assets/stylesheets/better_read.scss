@@ -17,7 +17,7 @@
   top: 0;
   left: 0;
   min-width: 100%;
-  min-height: 100%;
+  min-height: 600px;
 }
 
 #top-level-landing {
@@ -49,10 +49,10 @@
   justify-content: center;
   background-color: white;
   width: 40%;
-  height: 500px;
-  margin: auto;
+  height: 300px;
+  margin:auto;
   border-radius: 10px;
-  box-shadow: 5px 5px 5px #888888;
+  box-shadow: 5px 5px 5px 5px #888888;
 }
 
 .sign-items {
@@ -61,8 +61,11 @@
 }
 
 .form-submission-box {
-  display: flex;
-  align-items: center;
+  border-radius: 3px;
+  border: 1px solid #D6D0C4;
+  font-family: "Lato", "Helvetica Neue","Helvetica",sans-serif;
+  padding: 12px 24px;
+  font-size: 16px;
 }
 
 .footer {
