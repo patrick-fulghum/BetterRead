@@ -1,6 +1,8 @@
 .logo {
   height: 43px;
   width: 197px;
+  padding-left: 20px;
+  margin-bottom: 30px;
 }
 
 #container {
@@ -80,10 +82,12 @@
 .link-to-button {
   font: bold 11px Arial;
   text-decoration: none;
-  background-color: #EEEEEE;
-  color: #333333;
-  padding: 2px 6px 2px 6px;
-  border: 1px solid #CCCCCC;
+  background-color: #382110;
+  color: white;
+  padding: 10px 12px;
+  border: 1px solid #382110;
+  border-radius: 3px;
+  font-family: "Lato","Helvetica Neue","Helvetica", sans-serif;
 }
 
 .side-by-side {
@@ -93,6 +97,8 @@
 
 .landing-login-form-ul {
   list-style: none;
+  display: flex;
+
 }
 
 .sign-items {
@@ -114,11 +120,12 @@
 #sub-landing-masthead {
   display: flex;
   justify-content: space-around;
+  position: relative;
 }
 
 #landing-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   background-image: url("basic_background");
 }
@@ -187,4 +194,64 @@
 
 .padding-left-a-bit {
   padding-left: 50px;
+}
+
+.landing-signup-form-ul {
+}
+
+.landing-signup-form-ul > li {
+  list-style: none;
+  width:270px;
+  margin: 0;
+  font-size: 16px;
+  font-weight: lighter;
+}
+
+.landing-signup-form-ul > li > input {
+  width:270px;
+  padding: 7px 5px;
+  margin: 0;
+  font-size: 16px;
+  font-weight: lighter;
+}
+
+#new-here {
+  font-size: 20px;
+}
+
+#favorite-book-header {
+  text-align: center;
+  padding: 5px 10px 10px 10px;
+  font-size: 60px;
+  max-width: 400px;
+  color: #664400;
+  position: absolute;
+  bottom: -40px;
+}
+
+.landing-login-form > li > input {
+  width: 120px;
+  height: 18px;
+  padding: 7px 5px;
+  margin: 0;
+}
+
+.landing-login-form {
+  display: flex;
+  align-items: center;
+}
+
+.landing-signup-submission {
+  padding: 8px;
+  border: 0px;
+  border-radius: 4px;
+  background-color: #fdd05f;
+  font-size: 18px;
+  line-height: 22px;
+  width: 85px;
+}
+
+
+.login-button {
+  margin-bottom: 30px;
 }

@@ -157,57 +157,61 @@ class LandingPage extends React.Component {
       return (
         <div id="top-level-landing">
           <div id="landing-header">
-            <div>
-              <Link to="/">
-                <img className="logo" src={window.logo} />
-              </Link>
-            </div>
-            <form onSubmit={this.handleLogin} className="landing-login-form">
-              <ul className="landing-login-form-ul">
+            <Link to="/">
+              <img className="logo" src={window.logo} />
+            </Link>
+            <ul className="landing-login-form-ul">
+              <form onSubmit={this.guestLogin} className="demo">
+                <li>
+                  <button
+                    type="submit"
+                    className="link-to-button demo-button">
+                    Demo
+                  </button>
+                </li>
+              </form>
+              <form onSubmit={this.handleLogin} className="landing-login-form">
                 <li className="float-left sign-items">
                   <input
                     type="text"
                     onChange={this.update('email')}
                     placeholder="Email address"
-                    className="landing-login-email block"
+                    className="landing-login-form-input block"
                     />
                 </li>
                 <li className="float-left sign-items">
                   <input
                     type="password"
                     onChange={this.update('password')}
-                    className="landing-login-password block"
+                    className="landing-login-form-input block"
                     />
                 </li>
                 <button
                   type="submit"
-                  className="link-to-button"
+                  className="login-button link-to-button"
                   >Login</button>
-              </ul>
-            </form>
-            <form onSubmit={this.guestLogin} className="demo">
-              <button type="submit" className="demo-button">
-                Demo
-              </button>
-            </form>
+              </form>
+            </ul>
           </div>
           <div id="landing-masthead">
             <div id="sub-landing-masthead">
-              <h2>
-                Meet your next favorite book!
-              </h2>
+              <div id="header-container">
+                <h2 id="favorite-book-header">
+                  Meet your next favorite book!
+                </h2>
+              </div>
               <div>
                 <form onSubmit={this.handleSignup}
                   className="landing-signup-form">
-                  <ul className="landing-login-form-ul">
-                    <li>
+                  <ul className="landing-signup-form-ul">
+                    <li id="new-here">
                       New here? Create a free account!
                     </li>
                     <li>
                       <input
                         type="text"
                         onChange={this.update('name')}
-                        placeholder="name"
+                        placeholder="Name"
                         />
                     </li>
                     <li>
@@ -223,6 +227,7 @@ class LandingPage extends React.Component {
                         type="password"
                         onChange={this.update('password')}
                         className="landing-signup-password"
+                        placeholder="Password"
                         />
                     </li>
                     <button
