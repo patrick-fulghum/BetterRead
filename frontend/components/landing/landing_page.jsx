@@ -8,6 +8,7 @@ class LandingPage extends React.Component {
     this.state = {
       email: "",
       password: "",
+      name: "",
     };
     this.handleLogin = this.handleLogin.bind(this);
     this.handleSignup = this.handleSignup.bind(this);
@@ -45,7 +46,7 @@ class LandingPage extends React.Component {
       email: "BetterReadGuest",
       password: "password",
       name: "Guest",
-    }
+    };
     this.props.loginAction(guest);
   }
 
@@ -174,7 +175,6 @@ class LandingPage extends React.Component {
                 <li className="float-left sign-items">
                   <input
                     type="password"
-                    value={this.state.password}
                     onChange={this.update('password')}
                     className="landing-login-password block"
                     />
@@ -202,6 +202,13 @@ class LandingPage extends React.Component {
                   <ul className="landing-login-form-ul">
                     <li>
                       New here? Create a free account!
+                    </li>
+                    <li>
+                      <input
+                        type="text"
+                        onChange={this.update('name')}
+                        placeholder="name"
+                        />
                     </li>
                     <li>
                       <input

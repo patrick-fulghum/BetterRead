@@ -7,6 +7,7 @@ class SessionForm extends React.Component {
     this.state = {
       email: "",
       password: "",
+      name: "",
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -76,6 +77,17 @@ class SessionForm extends React.Component {
               {this.renderErrors()}
             </li>
             <li className="float-left sign-items">
+              <label className='block'>Name
+                <input
+                  type="text"
+                  value={this.state.name}
+                  onChange={this.update('name')}
+                  placeholder="Name"
+                  className="block"
+                  />
+              </label>
+            </li>
+            <li>
               <label className='block'>Email Address
                 <input
                   type="text"
