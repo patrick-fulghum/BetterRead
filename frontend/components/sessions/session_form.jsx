@@ -18,6 +18,12 @@ class SessionForm extends React.Component {
     }
   }
 
+  componentWillUnmount() {
+    if (this.props.errors) {
+      this.props.clearErrors();
+    }
+  }
+
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value,
@@ -71,6 +77,14 @@ class SessionForm extends React.Component {
     }
     return (
       <div className="form-container">
+        <div className="session-header">
+          <div>
+            <Link to="/"><img className="logo" src={window.logo} /></Link>
+          </div>
+          <div className="top-right">
+            {contingentRendering}
+          </div>
+        </div>
         <form onSubmit={this.handleSubmit} className="form-box">
           <ul className="form-login">
             <li>
@@ -114,9 +128,6 @@ class SessionForm extends React.Component {
             >{path.slice(1)}</button>
         </ul>
         </form>
-        <div className="top-right">
-          {contingentRendering}
-        </div>
         <div>
           <img className="footer" src={window.bookrow}></img>
         </div>
