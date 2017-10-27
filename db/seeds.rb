@@ -7,5 +7,17 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.destroy_all
+Book.destroy_all
 
-guest = User.create!(email:"BetterReadGuest", password:"password", name: "Guest")
+guest = User.create!(
+  email: "BetterReadGuest",
+  password: "password",
+  name: "Guest"
+)
+
+# book1 = Book.create!(
+#   title: "Test",
+#   description: "test2",
+#   genre: "Testing",
+#   author: ""
+# )

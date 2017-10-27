@@ -71,6 +71,7 @@ class LandingPage extends React.Component {
     this.redirectToLoginIfErrors();
   }
 
+
   render() {
     if (this.props.loggedIn) {
       return (

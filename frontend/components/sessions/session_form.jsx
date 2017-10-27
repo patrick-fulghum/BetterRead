@@ -75,6 +75,7 @@ class SessionForm extends React.Component {
         </div>
       );
     }
+
     return (
       <div className="form-container">
         <div className="session-header">
