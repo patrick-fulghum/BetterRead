@@ -28,3 +28,17 @@ quote1 = Quote.create!(
   category: "funny",
   portrait: "oscar_wilde_portrait"
 )
+
+quote2 = Quote.create!(
+  author: "Marcus Tullius Cicero",
+  content: "A room without books is like a body without a soul",
+  category: "life",
+  portrait: "cicero_portrait"
+)
+
+quote3 = Quote.create!(
+  author: "Howard Phillips Lovecraft",
+  content: "That is not dead which can eternal lie, and with strange aeons even death may die.",
+  category: "life",
+  portrait: "lovecraft_portrait"
+)
