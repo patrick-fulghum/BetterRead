@@ -258,3 +258,15 @@
 .login-button {
   margin-bottom: 30px;
 }
+
+.session-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 0 20px 0;
+}
+
+.session-logo {
+  height: 43px;
+  width: 197px;
+}
