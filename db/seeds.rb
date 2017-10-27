@@ -21,3 +21,10 @@ guest = User.create!(
 #   genre: "Testing",
 #   author: ""
 # )
+
+quote1 = Quote.create!(
+  author: "Oscar Wilde",
+  content: "I can resist anything but temptation.",
+  category: "funny",
+  portrait: "oscar_wilde_portrait"
+)

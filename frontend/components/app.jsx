@@ -6,11 +6,13 @@ import LandingPageContainer from './landing/landing_page_container';
 import AuthRoute from '../api_util/route_util';
 import Construct from './construction/construction';
 import DiscoveryPageContainer from './discovery/discovery_container';
+import QuotePageContainer from './quotes/quotes_container';
 
 const App = () => (
   <div id="ultimate-container">
     <Route exact path="/" component={LandingPageContainer} />
     <Route exact path="/" component={DiscoveryPageContainer} />
+    <Route exact path="/" component={QuotePageContainer} />
     <Route path="/construction" component={Construct} />
     <AuthRoute path="/signup" component={SessionFormContainer} />
     <AuthRoute path="/login" component={SessionFormContainer} />
