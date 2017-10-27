@@ -12,7 +12,7 @@
 }
 
 .form-container {
-  background-image: image_url("tan_background");
+  background-image: image-url("tan_background");
   position: relative;
   top: 0;
   left: 0;
@@ -21,7 +21,7 @@
 }
 
 #top-level-landing {
-  background-image: image_url("basic_background");
+  background-image: image-url("basic_background");
   z-index: -1;
   min-height:370px;
   background-size: cover;
@@ -130,7 +130,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-image: image_url("basic_background");
+  background-image: image-url("basic_background");
 }
 
 .landing-header {
@@ -268,4 +268,37 @@
 .session-logo {
   height: 43px;
   width: 197px;
+}
+
+.book-listing {
+  min-width: 368px;
+  min-height: 150px;
+  display: flex;
+  list-style: none;
+}
+
+.hp-image {
+  min-width: 120px;
+  min-height: 180px;
+  background-image: image-url("HP_cover_art_cropped");
+  background-size: contain;
+  margin-left: 10px;
+}
+
+.arrow-box {
+  display: flex;
+  align-items: center;
+  font-size: 80px;
+  margin-left: 50px;
+}
+
+.discovery-p-tags {
+  display: flex;
+  justify-content: space-around;
+}
+
+#discovery {
+  background-image: image-url("tan_background");
+  background-size: cover;
+  z-index: 100;
 }
