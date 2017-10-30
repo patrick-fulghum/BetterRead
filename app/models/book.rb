@@ -3,7 +3,6 @@ class Book < ApplicationRecord
             :description,
             :genre,
             :author,
-            :isbn,
-            :image_url,
+            :cover,
             presence: true
 end

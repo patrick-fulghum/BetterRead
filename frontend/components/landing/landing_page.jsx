@@ -157,6 +157,20 @@ class LandingPage extends React.Component {
             <div className="hover-black">
               Search Bar PlaceHolder
             </div>
+            <div className="hover-black dropdown">
+              <button className="drop-button">
+                <i className="fa fa-user-circle" ></i>
+              </button>
+              <div className="dropdown-links">
+                <Link to='/construction'>
+                  Profile
+                </Link>
+                <Link
+                  to='/'
+                  onClick={ this.props.logoutAction }>Sign Out
+                </Link>
+              </div>
+            </div>
             <Link to="/construction" className="padding-left-a-bit">
               <i className="fa fa-bell"></i>
             </Link>
@@ -169,14 +183,6 @@ class LandingPage extends React.Component {
             <Link to="/construction">
               <i className="fa fa-users"></i>
             </Link>
-            <div className="hover-black dropdown">
-              <button className="drop-button">
-                <i className="fa fa-user-circle" ></i>
-              </button>
-              <div className="dropdown-links">
-                <button onClick={ this.props.logoutAction }>Sign out</button>
-              </div>
-            </div>
           </div>
         </div>
       );
