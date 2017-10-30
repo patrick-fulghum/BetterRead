@@ -210,6 +210,7 @@ class LandingPage extends React.Component {
                   <input
                     type="password"
                     onChange={this.update('password')}
+                    placeholder="Password"
                     className="landing-login-form-input block"
                     />
                 </li>
@@ -224,36 +225,35 @@ class LandingPage extends React.Component {
             <div id="sub-landing-masthead">
               <div id="header-container">
                 <h2 id="favorite-book-header">
-                  Meet your next favorite book!
+                  Meet your next favorite book.
                 </h2>
               </div>
               <div>
                 <form onSubmit={this.handleSignup}
                   className="landing-signup-form">
                   <ul className="landing-signup-form-ul">
-                    <li id="new-here">
+                    <li className="access" id="new-here">
                       New here? Create a free account!
                     </li>
-                    <li>
+                    <li className="access" >
                       <input
                         type="text"
                         onChange={this.update('name')}
                         placeholder="Name"
+                        className="access"
                         />
                     </li>
-                    <li>
+                    <li className="access">
                       <input
                         type="text"
                         onChange={this.update('email')}
                         placeholder="Email Address"
-                        className="landing-signup-email"
                         />
                     </li>
-                    <li>
+                    <li className="access">
                       <input
                         type="password"
                         onChange={this.update('password')}
-                        className="landing-signup-password"
                         placeholder="Password"
                         />
                     </li>

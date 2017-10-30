@@ -18,7 +18,7 @@ class FooterPage extends React.Component {
           <Link to='/construction'>Linkin</Link>
         </div>
       </div>
-    )
+    );
   }
 }
 export default FooterPage;

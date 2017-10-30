@@ -115,6 +115,7 @@
 }
 
 .landing-signup-form {
+  padding-top: 40px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -124,9 +125,14 @@
   display: flex;
   justify-content: space-around;
   position: relative;
+  align-items: center;
+}
+
+#landing-masthead {
 }
 
 #landing-header {
+  padding-top: 10px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -225,8 +231,9 @@
 #favorite-book-header {
   text-align: center;
   padding: 5px 10px 10px 10px;
-  font-size: 60px;
-  max-width: 400px;
+  padding-bottom: 40px;
+  font-size: 70px;
+  max-width: 450px;
   color: #664400;
   position: absolute;
   bottom: -40px;
@@ -320,7 +327,21 @@
   flex-direction: row;
 }
 
+.access {
+  padding: 0 0 6px 0;
+}
 
+#main-content {
+  display: flex;
+}
+
+#left-container {
+  width: 66%;
+}
+
+#right-container {
+  width: 33%;
+}
 
 
 
