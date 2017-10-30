@@ -289,6 +289,7 @@
   min-height: 180px;
   background-image: image-url("HP_cover_art_cropped");
   background-size: contain;
+  background-repeat: no-repeat;
   margin-left: 10px;
 }
 
@@ -311,8 +312,10 @@
 }
 
 .quote-links {
+  margin: 0, 0, 30px, 0;
   display: flex;
   flex-direction: column;
+  font-family: "Lato", "Helvetica Neue","Helvetica",sans-serif;
 }
 
 .portrait {
@@ -332,6 +335,7 @@
 }
 
 #main-content {
+  background-image: image-url("tan-background");
   display: flex;
 }
 
@@ -343,8 +347,37 @@
   width: 33%;
 }
 
+#suggestions {
+  background-image: image-url("tan-background");
+  display: flex;
+}
 
+#quote {
+  display: flex;
+}
 
+.particular-quote {
+  max-width: 200px;
+}
+
+.quote-content {
+  min-width: 450px;
+}
+
+#footer-container {
+  background-image: image-url("tan-background");
+  display: flex;
+  justify-content: space-around;
+}
+
+.title {
+  font-family: "Lato", "Helvetica Neue","Helvetica",sans-serif;
+  font-size: 22px;
+}
+
+.sponsored-book-container {
+  display: flex;
+}
 
 
 

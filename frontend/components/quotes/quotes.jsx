@@ -26,7 +26,7 @@ class QuotePage extends React.Component {
           <img src={ portrait } />
         </div>
         <div className="quote-content">
-          <div>
+          <div className="particular-quote">
             { `"${this.props.quotes[randomNum].content}"` }
           </div>
           <div>
@@ -41,25 +41,31 @@ class QuotePage extends React.Component {
     if (this.props.quotes[1]) {
       return (
         <div id="quote">
-          <h2>
-            Quotes
-          </h2>
           <div>
+            <h2>
+              Quotes
+            </h2>
+            <br />
             <div>
-              { this.rotatingQuotes() }
-            </div>
-            <div className="quote-links">
-              <Link to="/construction">Best Quotes</Link>
-              <Link to="/construction">Love Quotes</Link>
-              <Link to="/construction">Inspirational Quotes</Link>
-              <Link to="/construction">Funny Quotes</Link>
-              <Link to="/construction">Motivational Quotes</Link>
-              <Link to="/construction">Life Quotes</Link>
-              <Link to="/construction">Friends Quotes</Link>
-              <Link to="/construction">Positive Quotes</Link>
-              <Link to="/construction">More Quotes</Link>
+              <div >
+                { this.rotatingQuotes() }
+              </div>
             </div>
           </div>
+        <div>
+
+        </div>
+        <div className="quote-links">
+          <Link to="/construction">Best Quotes</Link>
+          <Link to="/construction">Love Quotes</Link>
+          <Link to="/construction">Inspirational Quotes</Link>
+          <Link to="/construction">Funny Quotes</Link>
+          <Link to="/construction">Motivational Quotes</Link>
+          <Link to="/construction">Life Quotes</Link>
+          <Link to="/construction">Friends Quotes</Link>
+          <Link to="/construction">Positive Quotes</Link>
+          <Link to="/construction">More Quotes</Link>
+        </div>
         </div>
       );
     }

@@ -5,7 +5,7 @@ class SponsorShelfPage extends React.Component {
   render() {
     return (
       <div>
-        <h2>Love Lists?</h2>
+        <h2 className="title">Love Lists?</h2>
         <ul>
           <li>
             <Link to='/construction'>Best for Book Clubs</Link>

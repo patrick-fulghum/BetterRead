@@ -15,23 +15,27 @@ class DiscoveryPage extends React.Component {
     return (
       <div id="discovery">
         <div>
-          <div>
-            <h2>
-              Deciding what to read next?
-            </h2>
-            <p>
-              You're in the right place. Better_Read is the better
-              place to find what your next favorite book will be.
-            </p>
-          </div>
-          <div>
-            <h2>
-              What are your friends reading?
-            </h2>
-            <p>
-              Chances are excellent they
-              are discussing their favorite books on Better_Read.
-            </p>
+          <div id="suggestions">
+            <div>
+              <h2>
+                Deciding what to read next?
+              </h2>
+              <br />
+              <p>
+                You're in the right place. Better_Read is the better
+                place to find what your next favorite book will be.
+              </p>
+            </div>
+            <div>
+              <h2>
+                What are your friends reading?
+              </h2>
+              <br />
+              <p>
+                Chances are excellent they
+                are discussing their favorite books on Better_Read.
+              </p>
+            </div>
           </div>
         </div>
         <h2>
@@ -54,12 +58,6 @@ class DiscoveryPage extends React.Component {
             <div className="arrow-box">
               <i className="fa fa-arrow-right"></i>
             </div>
-            <li className="hp-image">
-            </li>
-            <li className="hp-image">
-            </li>
-            <li className="hp-image">
-            </li>
             <li className="hp-image">
             </li>
           </ul>

@@ -6,7 +6,7 @@ class SponsorBookPage extends React.Component {
   render() {
     return (
       <div>
-        <h2>
+        <h2 className="title">
           SPONSORED BOOKS
         </h2>
         <div className="sponsored-book-container">
@@ -19,11 +19,13 @@ class SponsorBookPage extends React.Component {
                 <Link to='/construction'>Classic Tales of Cosmic Horror</Link>
               </li>
               <li>
-                // TODO: Book Description
-                Collection of over 60 short stories by H.P. Lovecraft
+                This book is riveting, intriguing and horrifying.
               </li>
               <li>
                 <Link to='/'>better-read.herokuapp.com</Link>
+              </li>
+              <li>
+                <Link to='/'>View all Reviews</Link>
               </li>
             </ul>
           </div>
