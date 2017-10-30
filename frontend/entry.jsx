@@ -4,6 +4,7 @@ import {login, logout, signup} from './actions/session_actions';
 import configureStore from './store/store';
 import Root from './components/root';
 import {fetchQuotes} from './actions/quote_actions';
+import {fetchBooks} from './actions/book_actions';
 
 document.addEventListener("DOMContentLoaded", () => {
   let store;
@@ -21,5 +22,6 @@ document.addEventListener("DOMContentLoaded", () => {
   window.dispatch = store.dispatch;
   window.store = store;
   window.fetchQuotes = fetchQuotes;
+  window.fetchBooks = fetchBooks;
   ReactDOM.render(<Root store={ store } />, document.getElementById("root"));
 });

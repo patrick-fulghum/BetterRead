@@ -5,9 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
+hp = "Howard Phillips Lovecraft"
 User.destroy_all
 Book.destroy_all
+Quote.destroy_all
 
 guest = User.create!(
   email: "BetterReadGuest",
@@ -15,13 +16,16 @@ guest = User.create!(
   name: "Guest"
 )
 
-# book1 = Book.create!(
-#   title: "Test",
-#   description: "test2",
-#   genre: "Testing",
-#   author: ""
-# )
-hp = "Howard Phillips Lovecraft"
+book1 = Book.create!(
+  title: "The H.P. Lovecraft Collection",
+  subtitle: "Classic Tales of Cosmic Horror",
+  description: "This collection of H. P. Lovecraft's work contains
+  71 stories by the master of weird fantasy and strange horror fiction. ",
+  genre: "Horror",
+  author: hp,
+  cover: "HP_cover_art_cropped"
+)
+
 
 quote1 = Quote.create!(
   author: "Oscar Wilde",
@@ -44,10 +48,10 @@ quote3 = Quote.create!(
   portrait: "lovecraft_portrait"
 )
 
-book1 = Book.create!(
-  author: hp,
-  title: "At The Mouth of Madness",
-  description: "An expedition to Antarctica goes horribly wrong.",
-  genre: "horror",
-  cover: "",
-)
+# book1 = Book.create!(
+#   author: hp,
+#   title: "At The Mouth of Madness",
+#   description: "An expedition to Antarctica goes horribly wrong.",
+#   genre: "horror",
+#   cover: "",
+# )

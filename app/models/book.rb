@@ -4,5 +4,6 @@ class Book < ApplicationRecord
             :genre,
             :author,
             :cover,
+            :subtitle,
             presence: true
 end

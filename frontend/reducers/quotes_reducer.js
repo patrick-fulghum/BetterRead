@@ -5,7 +5,7 @@ const quotesReducer = (state = {}, action) => {
   Object.freeze(state);
   switch (action.type) {
     case (RECEIVE_QUOTE):
-      return merge({}, {[action.quote.id]: action.quote });
+      return merge({}, { [action.quote.id]: action.quote });
     case (RECEIVE_QUOTES):
       return merge({}, action.quotes);
     default:

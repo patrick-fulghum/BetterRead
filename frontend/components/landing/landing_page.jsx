@@ -17,6 +17,10 @@ class LandingPage extends React.Component {
     this.guestLogin = this.guestLogin.bind(this);
   }
 
+  componentDidMount() {
+    this.props.fetchBook(1);
+  }
+
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value,

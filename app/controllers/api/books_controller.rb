@@ -13,6 +13,20 @@ class Api::BooksController < ApplicationController
     @book = Book.find(params[:id])
   end
 
+  def update
+    @book = Book.find(params[:id])
+
+    if @post.update(book_params)
+      render :show
+    else
+      render json: @post.errors.full_messages, status: 422
+    end
+  end
+
+  def index
+    @books = Book.all
+  end
+  
   private
 
   def book_params
@@ -21,8 +35,7 @@ class Api::BooksController < ApplicationController
       :description,
       :genre,
       :author,
-      :isbn,
-      :image_url
+      :cover
     )
   end
 end

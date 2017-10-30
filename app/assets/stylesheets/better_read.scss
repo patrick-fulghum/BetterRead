@@ -173,8 +173,8 @@
 
 .dropdown-links  {
   display: none;
-  position: absolute;
   min-width: 160px;
+  position: absolute;
   box-shadow: 0px 6px 12px 0px rgba(0,0,0,0.4);
   z-index: 3;
   background-color: white;
@@ -336,7 +336,7 @@
 }
 
 #main-content {
-  background-image: image-url("tan-background");
+  background-image: image-url("tan_background");
   display: flex;
 }
 
@@ -349,7 +349,7 @@
 }
 
 #suggestions {
-  background-image: image-url("tan-background");
+  background-image: image-url("tan_background");
   display: flex;
 }
 
@@ -366,7 +366,7 @@
 }
 
 #footer-container {
-  background-image: image-url("tan-background");
+  background-image: image-url("tan_background");
   display: flex;
   justify-content: space-around;
 }
@@ -379,6 +379,8 @@
 .sponsored-book-container {
   display: flex;
 }
+
+
 
 
 
