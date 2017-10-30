@@ -21,6 +21,7 @@ guest = User.create!(
 #   genre: "Testing",
 #   author: ""
 # )
+hp = "Howard Phillips Lovecraft"
 
 quote1 = Quote.create!(
   author: "Oscar Wilde",
@@ -37,8 +38,16 @@ quote2 = Quote.create!(
 )
 
 quote3 = Quote.create!(
-  author: "Howard Phillips Lovecraft",
+  author: hp,
   content: "That is not dead which can eternal lie, and with strange aeons even death may die.",
   category: "life",
   portrait: "lovecraft_portrait"
+)
+
+book1 = Book.create!(
+  author: hp,
+  title: "At The Mouth of Madness",
+  description: "An expedition to Antarctica goes horribly wrong.",
+  genre: "horror",
+  cover: "",
 )
