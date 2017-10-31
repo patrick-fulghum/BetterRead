@@ -16,15 +16,14 @@ class DiscoveryPage extends React.Component {
   }
 
   rotatingBooks() {
-    if (this.props.books[5]) {
-      let randomNums = [];
-      while (randomNums.length < 5) {
-        let randomNum = Math.floor(Math.random()*5 + 1);
-        if (!randomNums.includes(randomNum)) {
-          randomNums.push(randomNum);
-        }
+    let randomNums = [];
+    while (randomNums.length < 5) {
+      let randomNum = Math.floor(Math.random()*5 + 1);
+      if (!randomNums.includes(randomNum)) {
+        randomNums.push(randomNum);
       }
-      debugger
+    }
+    if (this.props.books[1] && this.props.books[5]) {
       return (
         <ul className="book-listing">
           <li className="book-promotion">
@@ -47,14 +46,14 @@ class DiscoveryPage extends React.Component {
               <img src={this.props.books[randomNums[3]].cover}/>
             </Link>
           </li>
-            <div className="arrow-box">
-              <i className="fa fa-arrow-right"></i>
-            </div>
-            <li className="book-promotion">
-              <Link to={`/books/${randomNums[4]}`}>
-                <img src={this.props.books[randomNums[4]].cover}/>
-              </Link>
-            </li>
+          <div className="arrow-box">
+            <i className="fa fa-arrow-right"></i>
+          </div>
+          <li className="book-promotion">
+            <Link to={`/books/${randomNums[4]}`}>
+              <img src={this.props.books[randomNums[4]].cover}/>
+            </Link>
+          </li>
         </ul>
       );
     }
