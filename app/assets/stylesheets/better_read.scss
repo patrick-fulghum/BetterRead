@@ -2,6 +2,7 @@
   height: 43px;
   width: 197px;
   padding-left: 20px;
+  padding-top: 10px;
   margin-bottom: 30px;
 }
 
@@ -176,7 +177,7 @@
   min-width: 160px;
   position: absolute;
   box-shadow: 0px 6px 12px 0px rgba(0,0,0,0.4);
-  z-index: 3;
+  z-index: 30000;
   background-color: white;
 }
 
@@ -300,7 +301,8 @@
   display: flex;
   align-items: center;
   font-size: 80px;
-  margin-left: 50px;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 
 .discovery-p-tags {
@@ -316,6 +318,8 @@
   border: 10px;
   padding: 10px;
   border-radius: 13px;
+  max-height: 250px;
+
 }
 
 .quote-links {
@@ -409,6 +413,7 @@
 
 #book-show-info {
   padding-left: 50px;
+  padding-right: 50px;
 }
 
 input.star {
@@ -487,6 +492,12 @@ label.star:before {
 
 #sponsor-info {
   margin-left: 10px;
+}
+
+.book-promotion {
+  max-width: 90px;
+  max-height: 135px;
+  padding-right: 20px;
 }
 
 

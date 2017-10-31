@@ -195,7 +195,7 @@ class HeaderPage extends React.Component {
         <div className="top-level-landing">
           <div className="landing-header">
             <Link to="/">
-              <img className="logo" src={window.logo} />
+              <img className="logo not-logged-in-logo" src={window.logo} />
             </Link>
             <Link to="/" className="hover-black">
               Home
