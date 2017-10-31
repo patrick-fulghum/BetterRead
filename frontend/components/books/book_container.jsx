@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
-import BookShowPage from './books';
+import BookShowPage from './book_show';
+import { fetchBook } from '../../actions/book_actions';
 
 const mapStateToProps = (state, ownProps) => {
   return ({
@@ -7,9 +8,10 @@ const mapStateToProps = (state, ownProps) => {
   });
 };
 
-const mapDispatchToProps = (state, ownProps) => {
+const mapDispatchToProps = (dispatch, ownProps) => {
+  // const action = ownProps.match
   return ({
-
+    fetchBook: bookId => dispatch(fetchBook(bookId)),
   });
 };
 

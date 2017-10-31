@@ -11,7 +11,7 @@ import BookShowContainer from './books/book_container';
 
 const App = () => (
   <div id="ultimate-container">
-    <Route exact path="/" component={LandingPageContainer} />
+    <Route path="/" component={LandingPageContainer} />
     <Route exact path="/" component={MainContent} />
     <Route exact path='/books/:bookId' component={BookShowContainer} />
     <Route path="/construction" component={Construct} />
