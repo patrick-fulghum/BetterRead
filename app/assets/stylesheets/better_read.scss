@@ -488,6 +488,13 @@ label.star:before {
 
 #sponsor-main {
   padding-top: 15px;
+  background-image: image-url("tan_background");
+  border: 10px;
+  padding: 10px;
+}
+
+#sponsor-primary {
+
 }
 
 #sponsor-info {
@@ -495,9 +502,20 @@ label.star:before {
 }
 
 .book-promotion {
-  width: 100px;
-  height: 150px;
+  display: block;
+  width: 95px;
+  height: 130px;
   padding-right: 20px;
+}
+
+.book-title {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.sub-title {
+  font-size: 15px;
+  font-weight: bold;
 }
 
 
