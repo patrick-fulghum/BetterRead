@@ -17,8 +17,7 @@ guest = User.create!(
 )
 
 book1 = Book.create!(
-  title: "The H.P. Lovecraft Collection",
-  subtitle: "Classic Tales of Cosmic Horror",
+  title: "The H.P. Lovecraft Collection: Classic Tales of Cosmic Horror",
   description: "This collection of H. P. Lovecraft's work contains
   71 stories by the master of weird fantasy and strange horror fiction. ",
   genre: "Horror",
@@ -33,7 +32,7 @@ book2 = Book.new(
   author: "Stephen King",
 )
 
-file2 = File.open('app/assets/images/the_stand_cover.jpg')
+file2 = File.open('app/assets/images/the_stand_cover.jpeg')
 book2.cover = file2
 book2.save!
 

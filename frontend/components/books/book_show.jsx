@@ -8,25 +8,23 @@ class BookShowPage extends React.Component {
     this.props.fetchBook(this.props.match.url.slice(7));
   }
 
-  componentDidReceiveProps(nextProp) {
+  componentWillUpdate(nextProp) {
     let currentUrl = nextProp.match.url.slice(7);
-    // if (this.props.books.id !== currentUrl) {
-    this.props.fetchBook(currentUrl);
-    // }
+    if (this.props.books && this.props.books.id != currentUrl) {
+      this.props.fetchBook(currentUrl);
+    }
   }
 
   render(){
     let subtitle;
     if (this.props.books) {
-      subtitle = this.props.books.subtitle ?
-      `${this.props.books.subtitle}` : ``;
       return (
         <div id="book-show-main">
           <div id="book-show-page">
             <div id="book-show-cover">
               <img src={this.props.books.cover} />
               <div className="want-to-read">
-                <button classname="" onClick="">
+                <button>
                   <Link to="/construction">
                     <img src={window.wanna_read} />
                   </Link>
@@ -36,17 +34,17 @@ class BookShowPage extends React.Component {
                 Rate This Book
               </div>
               <div className="stars">
-                <form onSubmit={this.handleSubmit}>
+                <form onClick={this.handleSubmit}>
                   <input className="star star-1" id="star-1" type="radio" />
-                  <label className="star star-1 fa fa-star" for="star-1"></label>
+                  <label className="star star-1 fa fa-star" htmlFor="star-1"></label>
                   <input className="star star-2" id="star-2" type="radio" />
-                  <label className="star star-2 fa fa-star" for="star-2"></label>
+                  <label className="star star-2 fa fa-star" htmlFor="star-2"></label>
                   <input className="star star-3" id="star-3" type="radio" />
-                  <label className="star star-3 fa fa-star" for="star-3"></label>
+                  <label className="star star-3 fa fa-star" htmlFor="star-3"></label>
                   <input className="star star-4" id="star-4" type="radio" />
-                  <label className="star star-4 fa fa-star" for="star-4"></label>
+                  <label className="star star-4 fa fa-star" htmlFor="star-4"></label>
                   <input className="star star-5" id="star-5" type="radio" />
-                  <label className="star star-5 fa fa-star" for="star-5"></label>
+                  <label className="star star-5 fa fa-star" htmlFor="star-5"></label>
                 </form>
               </div>
             </div>
