@@ -8,11 +8,13 @@ import Construct from './construction/construction';
 import MainContent from './landing/main_content';
 import FooterPageContainer from './footer/footer_container';
 import BookShowContainer from './books/book_container';
+import HeaderContainer from './header/header_container';
 
 const App = () => (
   <div id="ultimate-container">
-    <Route path="/" component={LandingPageContainer} />
+    <Route exact path="/" component={LandingPageContainer} />
     <Route exact path="/" component={MainContent} />
+    <Route exact path='/books/:bookId' component={HeaderContainer} />
     <Route exact path='/books/:bookId' component={BookShowContainer} />
     <Route path="/construction" component={Construct} />
     <AuthRoute path="/signup" component={SessionFormContainer} />

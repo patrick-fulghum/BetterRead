@@ -5,16 +5,17 @@ class SponsorBookPage extends React.Component {
 
   render() {
     return (
-      <div>
+      <div id="sponsor-main">
         <h2 className="title">
           SPONSORED BOOKS
         </h2>
+        <br />
         <div className="sponsored-book-container">
           <div className="hp-image">
 
           </div>
           <div>
-            <ul>
+            <ul id="sponsor-info">
               <li>
                 <Link to='/construction'>Classic Tales of Cosmic Horror</Link>
               </li>

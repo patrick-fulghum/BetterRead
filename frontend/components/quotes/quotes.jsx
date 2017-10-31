@@ -29,8 +29,9 @@ class QuotePage extends React.Component {
           <div className="particular-quote">
             { `"${this.props.quotes[randomNum].content}"` }
           </div>
+          <br />
           <div>
-            { this.props.quotes[randomNum].author }
+            - { this.props.quotes[randomNum].author }
           </div>
         </div>
       </div>

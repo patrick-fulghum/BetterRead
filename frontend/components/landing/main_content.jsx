@@ -7,17 +7,18 @@ import QuotePage from '../quotes/quotes_container';
 class MainContent extends React.Component {
   render() {
     return (
-      <div id="main-content">
-        <div id="left-container">
-          <DiscoveryPage />
-          <QuotePage />
-        </div>
-        <div id="right-container">
-          <SponsorBookPage />
-          <SponsorShelfPage />
+      <div id="main-main">
+        <div id="main-content">
+          <div id="left-container">
+            <DiscoveryPage />
+            <QuotePage />
+          </div>
+          <div id="right-container">
+            <SponsorBookPage />
+            <SponsorShelfPage />
+          </div>
         </div>
       </div>
-
     );
   }
 }
