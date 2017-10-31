@@ -2,7 +2,6 @@ import { connect } from 'react-redux';
 import BookShowPage from './books';
 
 const mapStateToProps = (state, ownProps) => {
-  debugger
   return ({
     books: state.books[ownProps.match.params.bookId],
   });

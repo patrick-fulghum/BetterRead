@@ -23,7 +23,6 @@ book1 = Book.create!(
   71 stories by the master of weird fantasy and strange horror fiction. ",
   genre: "Horror",
   author: hp,
-  cover: "HP_cover_art_cropped"
 )
 
 

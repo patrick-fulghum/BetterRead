@@ -61,10 +61,11 @@
 }
 
 .form-submission-box {
-  border-radius: 3px;
+  border-radius: 9px;
   border: 1px solid #D6D0C4;
   font-family: "Lato", "Helvetica Neue","Helvetica",sans-serif;
   padding: 12px 24px;
+  background-color: #fdd05f;
   font-size: 16px;
 }
 
@@ -115,7 +116,6 @@
 }
 
 .landing-signup-form {
-  padding-top: 40px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -125,7 +125,6 @@
   display: flex;
   justify-content: space-around;
   position: relative;
-  align-items: center;
 }
 
 #landing-masthead {
@@ -226,7 +225,8 @@
 }
 
 #new-here {
-  font-size: 20px;
+  font-size: 17px;
+  font-family: Helvetica;
 }
 
 #favorite-book-header {
@@ -234,7 +234,7 @@
   padding: 5px 10px 10px 10px;
   padding-bottom: 40px;
   font-size: 70px;
-  max-width: 450px;
+  max-width: 480px;
   color: #664400;
   position: absolute;
   bottom: -40px;
