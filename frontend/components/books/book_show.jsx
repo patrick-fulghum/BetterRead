@@ -4,6 +4,11 @@ import Discovery from '../discovery/discovery_container';
 
 class BookShowPage extends React.Component {
 
+  constructor(props) {
+    super(props);
+    this.bookReview = this.bookReview.bind(this);
+  }
+
   componentDidMount() {
     this.props.fetchBook(this.props.match.url.slice(7));
     this.props.fetchUsers();
@@ -34,6 +39,7 @@ class BookShowPage extends React.Component {
   }
 
   bookReview(num) {
+    debugger
     let review = this.props.books.reviews[num];
     let reviewer = this.props.users[review.author_id].name;
     let creation = String(new Date(review.created_at)).slice(4,15);
@@ -166,7 +172,10 @@ class BookShowPage extends React.Component {
 
   render(){
     let subtitle;
-    if (Object.keys(this.props.books).length > 0) {
+    if (this.props.books &&
+      this.props.users &&
+      Object.keys(this.props.books).length > 0 &&
+      Object.keys(this.props.users).length > 0) {
       return (
         <div id="book-show-main">
           <div id="book-show-page">
