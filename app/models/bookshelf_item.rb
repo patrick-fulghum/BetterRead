@@ -11,4 +11,8 @@ class BookshelfItem < ApplicationRecord
   primary_key: :id,
   foreign_key: :bookshelf_id
 
+  belongs_to :user,
+  through: :bookshelf,
+  source: :user
+
 end

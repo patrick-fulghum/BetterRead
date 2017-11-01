@@ -1,6 +1,6 @@
 class Bookshelf < ApplicationRecord
   validates :type, :owner_id, presence: true
-  
+
   has_many :bookshelf_items,
   primary_key: :id,
   foreign_key: :bookshelf_id,
@@ -8,7 +8,7 @@ class Bookshelf < ApplicationRecord
 
   has_many :books,
   through: :bookshelf_items,
-  source: :books
+  source: :book
 
   belongs_to :user,
   primary_key: :id,
