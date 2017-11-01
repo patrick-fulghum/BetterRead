@@ -115,3 +115,10 @@ review1 = Review.create!(
   body: "This book is riveting, intriguing, and horrifying.",
   rating: 5
 )
+
+review2 = Review.create!(
+  book_id: book1.id,
+  author_id: guest.id,
+  body: "This book is scary but verbose.",
+  rating: 3
+)

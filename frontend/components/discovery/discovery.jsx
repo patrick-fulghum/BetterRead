@@ -11,6 +11,7 @@ class DiscoveryPage extends React.Component {
     this.props.fetchBooks();
   }
 
+
   handleClick(e) {
     e.preventDefault();
   }

@@ -33,7 +33,6 @@ class QuotePage extends React.Component {
   }
 
   render() {
-    debugger
     if (Object.keys(this.props.quotes).length > 0) {
       return (
         <div id="quote">

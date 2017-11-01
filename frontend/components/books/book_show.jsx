@@ -16,14 +16,31 @@ class BookShowPage extends React.Component {
     }
   }
 
-  bookReview() {
-    let review = this.props.books.reviews[0];
+  allBookReviews() {
+    let numReviews = this.props.books.reviews.length;
+    let array = [];
+    for (let i = 0; i < numReviews; i++) {
+      array.push(i);
+    }
+    return (
+      <div>
+          {
+            array.map((num) => (
+              this.bookReview(num)
+            ))
+          }
+      </div>
+    );
+  }
+
+  bookReview(num) {
+    let review = this.props.books.reviews[num];
     let reviewer = this.props.users[review.author_id].name;
-    debugger
+    let creation = String(new Date(review.created_at)).slice(4,15);
     return (
       <div>
         <div>
-          { reviewer } rated it { review.rating } on { review.created_at }
+          { reviewer } rated it { review.rating } on { creation }
         </div>
         <div>
           { review.body }
@@ -34,7 +51,7 @@ class BookShowPage extends React.Component {
 
   render(){
     let subtitle;
-    if (this.props.books && this.props.books.reviews && this.props.users) {
+    if (this.props.books && this.props.books.reviews[1] && this.props.users) {
       return (
         <div id="book-show-main">
           <div id="book-show-page">
@@ -82,7 +99,7 @@ class BookShowPage extends React.Component {
                 Community Reviews
               </div>
               <div>
-                { this.bookReview() }
+                { this.allBookReviews() }
               </div>
             </div>
             <div className="discovery-main" id="book-show-discovery">
