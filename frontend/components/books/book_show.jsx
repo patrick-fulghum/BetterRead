@@ -166,7 +166,7 @@ class BookShowPage extends React.Component {
 
   render(){
     let subtitle;
-    if (this.props.books && this.props.books.reviews[1] && this.props.users) {
+    if (Object.keys(this.props.books).length > 0) {
       return (
         <div id="book-show-main">
           <div id="book-show-page">
