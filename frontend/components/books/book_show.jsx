@@ -6,6 +6,7 @@ class BookShowPage extends React.Component {
 
   componentDidMount() {
     this.props.fetchBook(this.props.match.url.slice(7));
+    this.props.fetchUsers();
   }
 
   componentWillUpdate(nextProp) {
@@ -59,6 +60,12 @@ class BookShowPage extends React.Component {
               </div>
               <div>
                 {this.props.books.description}
+              </div>
+              <br />
+              <div className="title">
+                Community Reviews
+              </div>
+              <div>
               </div>
             </div>
             <div className="discovery-main" id="book-show-discovery">

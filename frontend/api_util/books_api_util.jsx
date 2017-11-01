@@ -24,6 +24,6 @@ export const updateBook = (book) => {
 export const fetchBooks = () => {
   return $.ajax({
     method: "GET",
-    url: `api/books`
+    url: `api/books`,
   });
 };

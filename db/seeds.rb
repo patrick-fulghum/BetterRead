@@ -108,3 +108,10 @@ quote3 = Quote.new(
 file8 = File.open('app/assets/images/lovecraft_portrait.jpeg')
 quote3.portrait = file8
 quote3.save!
+
+review1 = Review.create!(
+  book_id: book1.id,
+  author_id: guest.id,
+  body: "This book is riveting, intriguing, and horrifying.",
+  rating: 5
+)

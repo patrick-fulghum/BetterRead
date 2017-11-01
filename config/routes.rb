@@ -7,5 +7,6 @@ Rails.application.routes.draw do
     resource :session, only: %i(create destroy show)
     resources :books, only: %i(create show update index)
     resources :quotes, only: %i(index show)
+    resources :reviews, only: %i(create update index destroy)
   end
 end
