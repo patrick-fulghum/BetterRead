@@ -198,15 +198,13 @@ class LandingPage extends React.Component {
               <img className="logo" src={window.logo} />
             </Link>
             <ul className="landing-login-form-ul">
-              <form onSubmit={this.guestLogin} className="demo">
-                <li>
-                  <button
-                    type="submit"
-                    className="link-to-button demo-button">
-                    Demo
-                  </button>
-                </li>
-              </form>
+              <li>
+                <button
+                  onClick={this.guestLogin}
+                  className="link-to-button demo-button">
+                  Demo
+                </button>
+              </li>
               <form onSubmit={this.handleLogin} className="landing-login-form">
                 <li className="float-left sign-items">
                   <input
