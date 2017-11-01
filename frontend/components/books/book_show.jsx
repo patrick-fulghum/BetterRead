@@ -16,9 +16,25 @@ class BookShowPage extends React.Component {
     }
   }
 
+  bookReview() {
+    let review = this.props.books.reviews[0];
+    let reviewer = this.props.users[review.author_id].name;
+    debugger
+    return (
+      <div>
+        <div>
+          { reviewer } rated it { review.rating } on { review.created_at }
+        </div>
+        <div>
+          { review.body }
+        </div>
+      </div>
+    );
+  }
+
   render(){
     let subtitle;
-    if (this.props.books) {
+    if (this.props.books && this.props.books.reviews && this.props.users) {
       return (
         <div id="book-show-main">
           <div id="book-show-page">
@@ -66,6 +82,7 @@ class BookShowPage extends React.Component {
                 Community Reviews
               </div>
               <div>
+                { this.bookReview() }
               </div>
             </div>
             <div className="discovery-main" id="book-show-discovery">
