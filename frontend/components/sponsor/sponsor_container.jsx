@@ -5,7 +5,7 @@ import SponsorBookPage from './sponsor_books';
 const mapStateToProps = (state, ownProps) => {
   return {
     books: state.books
-  }
+  };
 };
 
 const mapDispatchToProps = () => ({

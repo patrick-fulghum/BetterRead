@@ -18,7 +18,7 @@ class LandingPage extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchBook(1);
+    this.props.fetchBooks();
   }
 
   update(field) {

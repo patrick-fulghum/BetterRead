@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import {login, logout, signup, clearErrors } from '../../actions/session_actions';
-import { fetchBook } from '../../actions/book_actions';
+import { fetchBooks } from '../../actions/book_actions';
 import HeaderPage from './header';
 
 const mapStateToProps = (state, ownProps) => {
@@ -19,7 +19,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     signupAction: user => dispatch(signupAction(user)),
     clearErrors: () => dispatch(clearErrors()),
     logoutAction: () => dispatch(logoutAction()),
-    fetchBook: (bookId) => dispatch(fetchBook(bookId)),
+    fetchBooks: () => dispatch(fetchBooks()),
   };
 };
 

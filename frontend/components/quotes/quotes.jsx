@@ -11,27 +11,21 @@ class QuotePage extends React.Component {
   }
 
   rotatingQuotes() {
-    let portrait;
-    let randomNum = (Math.floor(Math.random() * 3) + 1);
-    if (randomNum === 1) {
-      portrait = window.oscar;
-    } else if (randomNum === 2) {
-      portrait = window.cicero;
-    } else {
-      portrait = window.howie;
-    }
+    let sample = Object.keys(this.props.quotes).length;
+    let randomNum = Math.floor(Math.random() * sample);
+    let quote = this.props.quotes[Object.keys(this.props.quotes)[randomNum]];
     return (
       <div id="quote-text">
         <div className="portrait">
-          <img src={ portrait } />
+          <img src={ quote.portrait } />
         </div>
         <div className="quote-content">
           <div className="particular-quote">
-            { `"${this.props.quotes[randomNum].content}"` }
+            { `"${quote.content}"` }
           </div>
           <br />
           <div>
-            - { this.props.quotes[randomNum].author }
+            - { quote.author }
           </div>
         </div>
       </div>
@@ -39,7 +33,8 @@ class QuotePage extends React.Component {
   }
 
   render() {
-    if (this.props.quotes[1]) {
+    debugger
+    if (Object.keys(this.props.quotes).length > 0) {
       return (
         <div id="quote">
           <div>

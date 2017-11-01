@@ -79,31 +79,32 @@ file5 = File.open('app/assets/images/aurora_cover.jpg')
 book5.cover = file5
 book5.save!
 
-quote1 = Quote.create!(
+quote1 = Quote.new(
   author: "Oscar Wilde",
   content: "I can resist anything but temptation.",
-  category: "funny",
-  portrait: "window.oscar"
+  category: "funny"
 )
 
-quote2 = Quote.create!(
+file6 = File.open('app/assets/images/oscar_wilde_portrait.jpg')
+quote1.portrait = file6
+quote1.save!
+
+quote2 = Quote.new(
   author: "Marcus Tullius Cicero",
   content: "A room without books is like a body without a soul.",
   category: "life",
-  portrait: "cicero_portrait"
 )
 
-quote3 = Quote.create!(
+file7 = File.open('app/assets/images/cicero_portrait.jpg')
+quote2.portrait = file7
+quote2.save!
+
+quote3 = Quote.new(
   author: hp,
   content: "That is not dead which can eternal lie, and with strange aeons even death may die.",
-  category: "life",
-  portrait: "lovecraft_portrait"
+  category: "life"
 )
 
-# book1 = Book.create!(
-#   author: hp,
-#   title: "At The Mouth of Madness",
-#   description: "An expedition to Antarctica goes horribly wrong.",
-#   genre: "horror",
-#   cover: "",
-# )
+file8 = File.open('app/assets/images/lovecraft_portrait.jpeg')
+quote3.portrait = file8
+quote3.save!
