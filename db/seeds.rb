@@ -48,7 +48,7 @@ file3 = File.open('app/assets/images/Ready_Player_One_cover.jpg')
 book3.cover = file3
 book3.save!
 
-book4 = Book.create!(
+book4 = Book.new(
   title: "At The Mountains of Madness",
   description: "The undisputed master of strange fiction, H.P. Lovecraft, delivers his greatest tale.
   Dr. William Dyer details the events of a disastrous expedition to the Antarctic continent in September 1930.",

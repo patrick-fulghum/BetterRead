@@ -4,7 +4,7 @@ import { Link, withRouter } from 'react-router-dom';
 class SponsorBookPage extends React.Component {
 
   generateBook(num) {
-    if (this.props.books[1] && this.props.books[5]) {
+    if (Object.keys(this.props.books).length > 1) {
       return(
         <div className="sponsored-book-container">
           <div>
@@ -37,16 +37,17 @@ class SponsorBookPage extends React.Component {
   }
 
   ensureDiff() {
-    let num1 = Math.floor(Math.random()*5 + 1);
-    let num2 = Math.floor(Math.random()*5 + 1);
+    let sample = Object.keys(this.props.books).length;
+    let num1 = Math.floor(Math.random()*(sample));
+    let num2 = Math.floor(Math.random()*(sample));
     while (num2 === num1) {
-      num2 = Math.floor(Math.random()*5 + 1);
+      num2 = Math.floor(Math.random()*(sample));
     }
     return (
       <div>
-        {this.generateBook(num1)}
+        {this.generateBook(Object.keys(this.props.books)[num1])}
         <br />
-        {this.generateBook(num2)}
+        {this.generateBook(Object.keys(this.props.books)[num2])}
       </div>
     );
   }
