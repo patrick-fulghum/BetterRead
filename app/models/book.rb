@@ -8,4 +8,9 @@ class Book < ApplicationRecord
   foreign_key: :book_id,
   class_name: "Review"
 
+  has_many :bookshelf_items,
+  primary_key: :id,
+  foreign_key: :book_id,
+  class_name: "BookshelfItem"
+
 end
