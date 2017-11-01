@@ -37,16 +37,131 @@ class BookShowPage extends React.Component {
     let review = this.props.books.reviews[num];
     let reviewer = this.props.users[review.author_id].name;
     let creation = String(new Date(review.created_at)).slice(4,15);
-    return (
-      <div>
+    if (review.rating === 5) {
+      return (
         <div>
-          { reviewer } rated it { review.rating } on { creation }
+          <div>
+            <div className="review-title">
+              <div>
+                { reviewer } rated it &nbsp;
+
+                <i className="fa fa-star"></i>
+                <i className="fa fa-star"></i>
+                <i className="fa fa-star"></i>
+                <i className="fa fa-star"></i>
+                <i className="fa fa-star"></i>
+              </div>
+              <div>
+                { creation }
+              </div>
+            </div>
+          </div>
+          <div>
+            { review.body }
+          </div>
         </div>
+      );
+    }
+    if (review.rating === 4) {
+      return (
         <div>
-          { review.body }
+          <div>
+            <div className="review-title">
+              <div>
+                { reviewer } rated it &nbsp;
+
+                <i className="fa fa-star"></i>
+                <i className="fa fa-star"></i>
+                <i className="fa fa-star"></i>
+                <i className="fa fa-star"></i>
+                <i className="fa fa-star-o"></i>
+              </div>
+              <div>
+                { creation }
+              </div>
+            </div>
+          </div>
+          <div>
+            { review.body }
+          </div>
         </div>
-      </div>
-    );
+      );
+    }
+    if (review.rating === 3) {
+      return (
+        <div>
+          <div>
+            <div className="review-title">
+              <div>
+                { reviewer } rated it &nbsp;
+
+                <i className="fa fa-star"></i>
+                <i className="fa fa-star"></i>
+                <i className="fa fa-star"></i>
+                <i className="fa fa-star-o"></i>
+                <i className="fa fa-star-o"></i>
+              </div>
+              <div>
+                { creation }
+              </div>
+            </div>
+          </div>
+          <div>
+            { review.body }
+          </div>
+        </div>
+      );
+    }
+    if (review.rating === 2) {
+      return (
+        <div>
+          <div>
+            <div className="review-title">
+              <div>
+                { reviewer } rated it &nbsp;
+
+                <i className="fa fa-star"></i>
+                <i className="fa fa-star"></i>
+                <i className="fa fa-star-o"></i>
+                <i className="fa fa-star-o"></i>
+                <i className="fa fa-star-o"></i>
+              </div>
+              <div>
+                { creation }
+              </div>
+            </div>
+          </div>
+          <div>
+            { review.body }
+          </div>
+        </div>
+      );
+    }
+    if (review.rating === 1) {
+      return (
+        <div>
+          <div>
+            <div className="review-title">
+              <div>
+                { reviewer } rated it &nbsp;
+
+                <i className="fa fa-star"></i>
+                <i className="fa fa-star-o"></i>
+                <i className="fa fa-star-o"></i>
+                <i className="fa fa-star-o"></i>
+                <i className="fa fa-star-o"></i>
+              </div>
+              <div>
+                { creation }
+              </div>
+            </div>
+          </div>
+          <div>
+            { review.body }
+          </div>
+        </div>
+      );
+    }
   }
 
   render(){
