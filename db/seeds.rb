@@ -103,7 +103,7 @@ book4.cover = file4
 book4.save!
 
 book5 = Book.new(
-  title: "Aurora: CV 01",
+  title: "Aurora: CV 01(Frontier Saga #1)",
   description: "A world recovering from a devastating plague…
 A brutal enemy threatening invasion…
 A young man seeking to escape the shadow of his father…
@@ -292,3 +292,182 @@ bookshelf_item5 = BookshelfItem.create!(
   book_id: book5.id,
   bookshelf_id: bookshelf1.id,
 )
+
+book6 = Book.new(
+  title: "1984",
+  description: "In George Orwell's 1984, Winston Smith wrestles with oppression in Oceania, a place where the Party scrutinizes human actions with ever-watchful Big Brother. Defying a ban on individuality, Winston dares to express his thoughts in a diary and pursues a relationship with Julia.",
+  genre: "Post-Apocalyptic",
+  author: "George Orwell",
+)
+
+file8 = File.open('app/assets/images/1984.jpeg')
+book6.cover = file8
+book6.save!
+
+book7 = Book.new(
+  title: "Harry Potter and The Chamber of Secrets(Harry Potter #2)",
+  description: "The Chamber was opened during the 1942-1943 school year by a sixteen year old teenager by the name of Tom Riddle, later known as Lord Voldemort. Through Merope Gaunt, his mother, and a Witch, Riddle was the last remaining direct descendant of Slytherin, and he desired to see Muggle-borns driven from Hogwarts.",
+  genre: "Young Adult",
+  author: "J.K. Rowling",
+)
+
+file9 = File.open('app/assets/images/chamber_secrets.jpeg')
+book7.cover = file9
+book7.save!
+
+book8 = Book.new(
+  title: "Harry Potter and The Sorcerer's Stone(Harry Potter #1)",
+  description: "But not everything is quiet at Hogwarts as Harry suspects someone is planning to steal the sorcerer's stone. On his eleventh birthday, Harry Potter discovers that he is no ordinary boy. Hagrid, a beetle-eyed giant, tells Harry that he is a wizard and has a place at Hogwarts School of Witchcraft and Wizardry.",
+  genre: "Young Adult",
+  author: "J.K. Rowling",
+)
+
+file10 = File.open('app/assets/images/sorcerers_stone.jpeg')
+book8.cover = file10
+book8.save!
+
+book9 = Book.new(
+  title: "Harry Potter and The Goblet of Fire(Harry Potter #4)",
+  description: "But not everything is quiet at Hogwarts as Harry suspects someone is planning to steal the sorcerer's stone. On his eleventh birthday, Harry Potter discovers that he is no ordinary boy. Hagrid, a beetle-eyed giant, tells Harry that he is a wizard and has a place at Hogwarts School of Witchcraft and Wizardry.",
+  genre: "Young Adult",
+  author: "J.K. Rowling",
+)
+
+file11 = File.open('app/assets/images/goblet_of_fire.jpeg')
+book9.cover = file11
+book9.save!
+
+book10 = Book.new(
+  title: "The Art of War",
+  description: "The Art of War is an ancient Chinese military treatise dating from the Spring and Autumn period in 5th century BC. The work, which is attributed to the ancient Chinese military strategist Sun Tzu ('Master Sun', also spelled Sunzi), is composed of 13 chapters.",
+  genre: "War",
+  author: "Sun Tzu",
+)
+
+file12 = File.open('app/assets/images/the_art_of_war.jpeg')
+book10.cover = file12
+book10.save!
+
+book11 = Book.new(
+  title: "Game of Thrones(Song of Ice and Fire #1)",
+  description: "Sweeping from a harsh land of cold to a summertime kingdom of epicurean plenty, A Game of Thrones tells a tale of lords and ladies, soldiers and sorcerers, assassins and bastards, who come together in a time of grim omens. Here an enigmatic band of warriors bear swords of no human metal; a tribe of fierce wildlings carry men off into madness; a cruel young dragon prince barters his sister to win back his throne; a child is lost in the twilight between life and death; and a determined woman undertakes a treacherous journey to protect all she holds dear. Amid plots and counter-plots, tragedy and betrayal, victory and terror, allies and enemies, the fate of the Starks hangs perilously in the balance, as each side endeavors to win that deadliest of conflicts: the game of thrones.",
+  genre: "Fantasy",
+  author: "George R.R. Martin",
+)
+
+file13 = File.open('app/assets/images/game_of_thrones.jpeg')
+book11.cover = file13
+book11.save!
+
+book12 = Book.new(
+  title: "Clash of Kings(Song of Ice and Fire #2)",
+  description: "A determined woman undertakes a treacherous journey to protect all she holds dear. Amid plots and counter-plots, tragedy and betrayal, victory and terror, allies and enemies, the fate of the Starks hangs perilously in the balance, as each side endeavors to win that deadliest of conflicts: the game of thrones.",
+  genre: "Fantasy",
+  author: "George R.R. Martin",
+)
+
+file14 = File.open('app/assets/images/clash_of_kings.jpeg')
+book12.cover = file14
+book12.save!
+
+book13 = Book.new(
+  title: "Clash of Kings(Song of Ice and Fire #3)",
+  description: "Of the five contenders for power, one is dead, another in disfavor, and still the wars rage, as alliances are made and broken. Joffrey sits on the Iron Throne, the uneasy ruler of the Seven Kingdoms. His most bitter rival, Lord Stannis, stands defeated and disgraced, victim of the sorceress who holds him in her thrall. Young Robb still rules the North from the fortress of Riverrun. Meanwhile, making her way across a blood-drenched continent is the exiled queen, Daenerys, mistress of the only three dragons left in the world. And as opposing forces maneuver for the final showdown, an army of barbaric wildlings arrives from the outermost limits of civilization, accompanied by a horde of mythical Others—a supernatural army of the living dead whose animated corpses are unstoppable. As the future of the land hangs in the balance, no one will rest until the Seven Kingdoms have exploded in a veritable storm of swords.",
+  genre: "Fantasy",
+  author: "George R.R. Martin",
+)
+
+file15 = File.open('app/assets/images/storm_of_swords.jpeg')
+book13.cover = file15
+book13.save!
+
+book14 = Book.new(
+  title: "Feast for Crows(Song of Ice and Fire #4)",
+  description: "It seems too good to be true. After centuries of bitter strife and fatal treachery, the seven powers dividing the land have decimated one another into an uneasy truce. Or so it appears. . . . With the death of the monstrous King Joffrey, Cersei is ruling as regent in King's Landing. Robb Stark's demise has broken the back of the Northern rebels, and his siblings are scattered throughout the kingdom like seeds on barren soil. Few legitimate claims to the once desperately sought Iron Throne still exist-or they are held in hands too weak or too distant to wield them effectively. The war, which raged out of control for so long, has burned itself out.",
+  genre: "Fantasy",
+  author: "George R.R. Martin",
+)
+
+file16 = File.open('app/assets/images/feast_for_crows.jpeg')
+book14.cover = file16
+book14.save!
+
+book15 = Book.new(
+  title: "A Dance with Dragons(Song of Ice and Fire #5)",
+  description: "To the north lies the mammoth Wall of ice and stone - a structure only as strong as those guarding it. There, Jon Snow, 998th Lord Commander of the Nights Watch, will face his greatest challenge yet. For he has powerful foes not only within the Watch but also beyond, in the land of the creatures of ice.
+  And from all corners, bitter conflicts soon reignite, intimate betrayals are perpetrated, and a grand cast of outlaws and priests, soldiers and skinchangers, nobles and slaves, will face seemingly insurmountable obstacles. Some will fail, others will grow in the strength of darkness. But in a time of rising restlessness, the tides of destiny and politics will lead inevitably to the greatest dance of all.",
+  genre: "Fantasy",
+  author: "George R.R. Martin",
+)
+
+file17 = File.open('app/assets/images/dance_of_dragons.jpeg')
+book15.cover = file17
+book15.save!
+
+book16 = Book.new(
+  title: "The Dead Zone",
+  description: "Johnny Smith awakens from a five-year coma after his car accident and discovers that he can see people's futures and pasts when he touches them. Many consider his talent a gift; Johnny feels cursed. His fiancée married another man during his coma, and people clamor for him to solve their problems. When Johnny has a disturbing vision after he shakes the hand of an ambitious and amoral politician, he must decide if he should take drastic action to change the future.",
+  genre: "Horror",
+  author: "Stephen King",
+)
+
+file18 = File.open('app/assets/images/dead_zone.jpeg')
+book16.cover = file18
+book16.save!
+
+book17 = Book.new(
+  title: "To Kill a Mockingbird",
+  description: "A gripping, heart-wrenching, and wholly remarkable tale of coming-of-age in a South poisoned by virulent prejudice, it views a world of great beauty and savage inequities through the eyes of a young girl, as her father - a crusading local lawyer - risks everything to defend a black man unjustly accused of a terrible crime.",
+  genre: "Classics",
+  author: "Harper Lee",
+)
+
+file19 = File.open('app/assets/images/to_kill_a_mockingbird.jpeg')
+book17.cover = file19
+book17.save!
+
+book18 = Book.new(
+  title: "Harry Potter and The Deathly Hallows(Harry Potter #7)",
+  description: "The Dark Lord is breathing fear into everything Harry loves and to stop him Harry will have to find and destroy the remaining Horcruxes. The final battle must begin - Harry must stand and face his enemy....",
+  genre: "Young Adult",
+  author: "J.K. Rowling",
+)
+
+file20 = File.open('app/assets/images/deathly_hallows.jpeg')
+book18.cover = file20
+book18.save!
+
+book19 = Book.new(
+  title: "Escalation(Frontier Sage #2)",
+  description: "A cease-fire that has lasted seven years. Worlds half-destroyed that have been rebuilt anew. Friends and crewmates scattered light-years apart. New leaders that would be kings. The Jung threat has been renewed, in ways not imagined. It will take a new savior to inspire the masses, and once again lead those willing to fight against oppression. But who will the new savior be?",
+  genre: "Science Fiction",
+  author: "Ryk Brown",
+)
+
+file21 = File.open('app/assets/images/CV-02.jpeg')
+book19.cover = file21
+book19.save!
+
+book20 = Book.new(
+  title: "The Legend of Corinair(Frontier Sage #3)",
+  description: "A captain coming into his own. A handful of refugees stranded on board. A possible traitor in their midst. A voyage into the territory of the very enemy that pursues them. Sometimes legends become realities in unexpected ways. It seems that fate has the crew of the Aurora firmly in its clutches.",
+  genre: "Science Fiction",
+  author: "Ryk Brown",
+)
+
+file22 = File.open('app/assets/images/CV-03.jpeg')
+book20.cover = file22
+book20.save!
+
+book21 = Book.new(
+  title: "Freedom's Dawn(Frontier Sage #4)",
+  description: "A ship under siege. A world on the brink of civil war. A distraught people seeking a new beginning. A battle weary crew that can barely hold it together.
+Even a legend can use a little help from time to time.
+The crew of the Aurora, the Karuzari, and the Corinairans must find a way to work together, or else they may all perish.",
+  genre: "Science Fiction",
+  author: "Ryk Brown",
+)
+
+file24 = File.open('app/assets/images/CV-04.jpeg')
+book21.cover = file24
+book21.save!
