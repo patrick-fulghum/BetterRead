@@ -3,24 +3,26 @@ import * as APIUtil from '../api_util/reviews_api_util';
 export const RECEIVE_REVIEW = "RECEIVE_REVIEW";
 export const DELETE_REVIEW = "DESTROY_REVIEW";
 
-const receiveReview = review => ({
+const receiveReview = (bookId, review) => ({
   type: RECEIVE_REVIEW,
+  bookId,
   review,
 });
 
-const destroyReview = reviewId => ({
+const destroyReview = (bookId, reviewId) => ({
   type: DELETE_REVIEW,
-  reviewId
+  bookId,
+  reviewId,
 });
 
 export const createReview = (bookId, thisReview) => dispatch => (
   APIUtil.createReview(bookId, thisReview)
-  .then(review => dispatch(receiveReview(review)))
+  .then((bookId, review) => dispatch(receiveReview(bookId, review)))
 );
 
 export const updateReview = (bookId, thisReview) => dispatch => (
   APIUtil.updateReview(bookId, thisReview)
-  .then(review => dispatch(receiveReview(review)))
+  .then((bookId, review) => dispatch(receiveReview(bookId, review)))
 );
 
 export const deleteReview = (bookId, reviewId) => dispatch => (
