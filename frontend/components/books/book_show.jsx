@@ -181,7 +181,13 @@ class BookShowPage extends React.Component {
       rating_sum += r.rating;
     });
     let final_rating = (Math.round((rating_sum / num_rating) * 100) / 100);
-    debugger
+    if (this.props.books.reviews.length === 0) {
+      return (
+        <div>
+          No Reviews yet exist for this book. Write one!
+        </div>
+      );
+    }
     if (final_rating < 1.3) {
       return(
         <div>

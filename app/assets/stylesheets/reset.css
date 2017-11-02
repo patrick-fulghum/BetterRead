@@ -1,7 +1,7 @@
 html, body, header, nav, h1, a,
 ul, li, strong, main, i,
 section, div, h2, p, form,
-fieldset, label, textarea,
+fieldset, label,
 span, article, footer, time, small {
   margin: 0;
   padding: 0;

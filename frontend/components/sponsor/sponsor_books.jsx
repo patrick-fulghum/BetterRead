@@ -3,6 +3,24 @@ import { Link, withRouter } from 'react-router-dom';
 
 class SponsorBookPage extends React.Component {
 
+  limitReviewLength(reviews) {
+    if (reviews[0]) {
+      if (reviews[0].body.length > 80) {
+        return (
+          <li>
+            {reviews[0].body.slice(0, 80)}...
+          </li>
+        );
+      } else {
+        return (
+          <li>
+            {reviews[0].body}
+          </li>
+        );
+      }
+    }
+  }
+
   generateBook(num) {
     return(
       <div className="sponsored-book-container">
@@ -19,14 +37,10 @@ class SponsorBookPage extends React.Component {
               </Link>
             </li>
             <br />
+            { this.limitReviewLength(this.props.books[num].reviews) }
+            <br />
             <li>
-              This book is riveting, intriguing and horrifying.
-            </li>
-            <li>
-              <Link to='/'>better-read.herokuapp.com</Link>
-            </li>
-            <li>
-              <Link to='/'>View all Reviews</Link>
+              <Link to={`/books/${num}`}>View all Reviews</Link>
             </li>
           </ul>
         </div>

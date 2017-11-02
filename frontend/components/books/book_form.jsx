@@ -50,7 +50,7 @@ class BookFormPage extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="book-form-top">
         <div className="book-form-left">
           <div className="title">
             Add a New Book
@@ -60,31 +60,61 @@ class BookFormPage extends React.Component {
             so ensure the book you add is not already in the database.
             Please read the guidelines to the right carefully before submission.
           </div>
-          <form onSubmit={this.handleSubmit}>
-            <label>Title
-              <input
-                type="text"
-                onChange={this.update('title')}
-                />
-            </label>
-            <label>Author
-              <input
-                type="text"
-                onChange={this.update('author')}
-                />
-            </label>
-            <label>Description
-              <textarea
-                type="text"
-                onChange={this.update('description')}
-                />
-            </label>
-            <label>Genre
-              <input
-                type="text"
-                onChange={this.update('genre')}
-                />
-            </label>
+          <form onSubmit={this.handleSubmit} className='book-form-main'>
+            <table>
+              <tr>
+                <td>
+                  <label for="book-form-title">Title
+                  </label>
+                </td>
+                <td>
+                  <input
+                    id="book-form-title"
+                    type="text"
+                    onChange={this.update('title')}
+                    />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="book-form-author">Author
+                  </label>
+                </td>
+                <td>
+                  <input
+                    id="book-form-author"
+                    type="text"
+                    onChange={this.update('author')}
+                    />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="book-form-description">Description
+                  </label>
+                </td>
+                <td>
+                  <textarea
+                    id="book-form-description"
+                    type="text"
+                    onChange={this.update('description')}
+                    />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="book-form-genre">Genre
+                  </label>
+                </td>
+                <td>
+                  <input
+                    id="book-form-genre"
+                    type="text"
+                    onChange={this.update('genre')}
+                    />
+                </td>
+              </tr>
+            </table>
             <label> Upload an Image
               <input
                 type="file"
@@ -95,7 +125,23 @@ class BookFormPage extends React.Component {
           </form>
         </div>
         <div className="book-form-right">
-
+          <div className="title">
+            Guidelines
+          </div>
+          <ul className="book-form-ul">
+            <li>
+              Title: If the book is in a series, put which book it is in parenthesis after the title. For example: Harry Potter and the Sorcerer's Stone (Harry Potter, #1).
+            </li>
+            <li>
+              Types of books: Please only add books. Books!
+            </li>
+            <li>
+              Periodicals such as newspapers, magazines, and comics are not books. However a volume of comics or articles or a graphic novel is considered a book.
+            </li>
+            <li>
+              Please don't put any spoilers in the description, use your judgment and don't ruin the book for others!
+            </li>
+          </ul>
         </div>
       </div>
 

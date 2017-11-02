@@ -533,6 +533,40 @@ label.star:before {
   border-bottom: 1px solid black;
 }
 
+.book-form-left {
+  padding-left: 100px;
+  max-width: 600px;
+}
+
+.book-form-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.book-form-top {
+  display: flex;
+}
+
+.book-form-right {
+  margin-left: 50px;
+  max-width: 400px;
+}
+
+.book-form-ul {
+  list-style: armenian;
+}
+
+.book-form-ul > li {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#book-form-description {
+  min-width: 474px;
+  min-height: 70px;
+  max-width: 474px;
+  max-height: 700px;
+}
 
 
 

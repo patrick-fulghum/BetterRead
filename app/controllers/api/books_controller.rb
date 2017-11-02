@@ -30,7 +30,6 @@ class Api::BooksController < ApplicationController
   private
 
   def book_params
-    debugger
     params.require(:book).permit(
       :title,
       :description,
