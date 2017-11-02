@@ -6,12 +6,24 @@ class BookFormPage extends React.Component {
   constructor(props) {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.state = this.props.book;
+    this.state = {
+      title: "",
+      author: "",
+      description: "",
+      coverFile: null,
+      coverUrl: null
+    }
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.action(this.props.book).then(() => this.props.history.push('/'));
+    let file = this.state.imageFile;
+    let formData = new FormData();
+    formData.append("book[title]", file);
+    formData.append("book[author]", file);
+    formData.append("book[description]", file);
+    formData.append("book[cover]", file);
+    createBook(formData);
   }
 
   update(field) {
@@ -22,7 +34,15 @@ class BookFormPage extends React.Component {
 
   updateFile(e) {
     let file = e.currentTarget.files[0];
-    let fileReader = new FileReader(); 
+    let reader = new FileReader();
+    reader.onloadend = () => {
+      this.setState({ imageUrl: reader.result, imageFile: file });
+    };
+    if (file) {
+      fileReader.readAsDataURL(file);
+    } else {
+      this.setState({ imageUrl:"", imageFile: null });
+    }
   }
 
   render() {
@@ -50,11 +70,14 @@ class BookFormPage extends React.Component {
                 onChange={this.update('author')}
                 />
             </label>
-            <label>Desciption
+            <label>Description
               <textarea />
             </label>
-            <label>
-
+            <label> Upload an Image
+              <input
+                type="file"
+                onChange={ this.updateFile }
+                />
             </label>
 
           </form>
@@ -67,3 +90,4 @@ class BookFormPage extends React.Component {
     );
   }
 }
+export default BookFormPage;

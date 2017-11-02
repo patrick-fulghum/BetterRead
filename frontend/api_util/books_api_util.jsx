@@ -5,11 +5,14 @@ export const fetchBook = (bookId) => {
   });
 };
 
-export const createBook = (book) => {
+export const createBook = (formData) => {
   return $.ajax({
     method: "POST",
     url: `api/books`,
-    data: { book },
+    dataType: "json",
+    contentType: false,
+    processData: false,
+    data: { formData },
   });
 };
 

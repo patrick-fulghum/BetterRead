@@ -9,6 +9,7 @@ import MainContent from './landing/main_content';
 import FooterPageContainer from './footer/footer_container';
 import BookShowContainer from './books/book_container';
 import HeaderContainer from './header/header_container';
+import BookFormContainer from './books/book_form_container';
 
 const App = () => (
   <div id="ultimate-container">
@@ -16,6 +17,7 @@ const App = () => (
     <Route exact path="/" component={MainContent} />
     <Route exact path='/books/:bookId' component={HeaderContainer} />
     <Route exact path='/books/:bookId' component={BookShowContainer} />
+    <Route exact path='/books/new' component={BookFormContainer} />
     <Route path="/construction" component={Construct} />
     <AuthRoute path="/signup" component={SessionFormContainer} />
     <AuthRoute path="/login" component={SessionFormContainer} />
