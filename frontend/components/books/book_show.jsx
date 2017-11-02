@@ -46,7 +46,7 @@ class BookShowPage extends React.Component {
     if (review.rating === 5) {
       return (
         <div>
-          <div>
+          <div className="review-body">
             <div className="review-title">
               <div>
                 { reviewer } rated it &nbsp;
@@ -71,7 +71,7 @@ class BookShowPage extends React.Component {
     if (review.rating === 4) {
       return (
         <div>
-          <div>
+          <div className="review-body">
             <div className="review-title">
               <div>
                 { reviewer } rated it &nbsp;
@@ -96,7 +96,7 @@ class BookShowPage extends React.Component {
     if (review.rating === 3) {
       return (
         <div>
-          <div>
+          <div className="review-body">
             <div className="review-title">
               <div>
                 { reviewer } rated it &nbsp;
@@ -121,7 +121,7 @@ class BookShowPage extends React.Component {
     if (review.rating === 2) {
       return (
         <div>
-          <div>
+          <div className="review-body">
             <div className="review-title">
               <div>
                 { reviewer } rated it &nbsp;
@@ -146,7 +146,7 @@ class BookShowPage extends React.Component {
     if (review.rating === 1) {
       return (
         <div>
-          <div>
+          <div className="review-body">
             <div className="review-title">
               <div>
                 { reviewer } rated it &nbsp;

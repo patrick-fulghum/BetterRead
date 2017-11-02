@@ -20,6 +20,11 @@ class BookFormPage extends React.Component {
     };
   }
 
+  updateFile(e) {
+    let file = e.currentTarget.files[0];
+    let fileReader = new FileReader(); 
+  }
+
   render() {
     return (
       <div>

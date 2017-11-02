@@ -6,7 +6,6 @@
   margin-bottom: 30px;
 }
 
-
 #container {
   height: 100%;
   width: 100%;
@@ -523,7 +522,11 @@ label.star:before {
   justify-content: space-between;
 }
 
-
+.review-body {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  margin: 20px;
+}
 
 
 
