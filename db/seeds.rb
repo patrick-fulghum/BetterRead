@@ -269,7 +269,15 @@ review15 = Review.create!(
 
 bookshelf1 = Bookshelf.create!(
   owner_id: user1.id,
-  category: "custom_shelf",
+  category: "to-read",
+)
+bookshelf2 = Bookshelf.create!(
+  owner_id: user1.id,
+  category: "currently-reading",
+)
+bookshelf3 = Bookshelf.create!(
+  owner_id: user1.id,
+  category: "have-read",
 )
 
 bookshelf_item1 = BookshelfItem.create!(

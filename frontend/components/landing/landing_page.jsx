@@ -168,7 +168,7 @@ class LandingPage extends React.Component {
                 <i className="fa fa-user-circle" ></i>
               </button>
               <div className="dropdown-links">
-                <Link to='/construction'>
+                <Link to='/profile'>
                   Profile
                 </Link>
                 <Link
