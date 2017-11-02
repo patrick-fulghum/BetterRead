@@ -29,7 +29,7 @@ class BookShowPage extends React.Component {
   allBookReviews() {
     let numReviews = this.props.books.reviews.length;
     let array = [];
-    for (let i = 0; i < numReviews; i++) {
+    for (let i = numReviews - 1; i >= 0; i--) {
       array.push(i);
     }
     return (
@@ -174,6 +174,142 @@ class BookShowPage extends React.Component {
     }
   }
 
+  bookRating() {
+    let rating_sum = 0;
+    let num_rating = this.props.books.reviews.length;
+    this.props.books.reviews.forEach(r => {
+      rating_sum += r.rating;
+    });
+    let final_rating = (Math.round((rating_sum / num_rating) * 100) / 100);
+    debugger
+    if (final_rating < 1.3) {
+      return(
+        <div>
+          <i className="fa fa-star"></i>
+          <i className="fa fa-star-o"></i>
+          <i className="fa fa-star-o"></i>
+          <i className="fa fa-star-o"></i>
+          <i className="fa fa-star-o"></i>
+          <i>   </i>
+          <i>   </i>
+          Overall Rating: { final_rating }
+        </div>
+      )
+    }
+    if (final_rating < 1.7) {
+      return(
+        <div>
+          <i className="fa fa-star"></i>
+          <i className="fa fa-star-half"></i>
+          <i className="fa fa-star-o"></i>
+          <i className="fa fa-star-o"></i>
+          <i className="fa fa-star-o"></i>
+          <i>   </i>
+          <i>   </i>
+          Overall Rating: { final_rating }
+        </div>
+      )
+    }
+    if (final_rating < 2.3) {
+      return(
+        <div>
+          <i className="fa fa-star"></i>
+          <i className="fa fa-star"></i>
+          <i className="fa fa-star"></i>
+          <i className="fa fa-star-o"></i>
+          <i className="fa fa-star-o"></i>
+          <i>   </i>
+          <i>   </i>
+          Overall Rating: { final_rating }
+        </div>
+      )
+    }
+    if (final_rating < 2.7) {
+      return(
+        <div>
+          <i className="fa fa-star"></i>
+          <i className="fa fa-star"></i>
+          <i className="fa fa-star-half"></i>
+          <i className="fa fa-star-o"></i>
+          <i className="fa fa-star-o"></i>
+          <i>   </i>
+          <i>   </i>
+          Overall Rating: { final_rating }
+        </div>
+      )
+    }
+    if (final_rating < 3.3) {
+      return(
+        <div>
+          <i className="fa fa-star"></i>
+          <i className="fa fa-star"></i>
+          <i className="fa fa-star"></i>
+          <i className="fa fa-star-o"></i>
+          <i className="fa fa-star-o"></i>
+          <i>   </i>
+          <i>   </i>
+          Overall Rating: { final_rating }
+        </div>
+      )
+    }
+    if (final_rating < 3.7) {
+      return(
+        <div>
+          <i className="fa fa-star"></i>
+          <i className="fa fa-star"></i>
+          <i className="fa fa-star"></i>
+          <i className="fa fa-star-half"></i>
+          <i className="fa fa-star-o"></i>
+          <i>   </i>
+          <i>   </i>
+          Overall Rating: { final_rating }
+        </div>
+      )
+    }
+    if (final_rating < 4.3) {
+      return(
+        <div>
+          <i className="fa fa-star"></i>
+          <i className="fa fa-star"></i>
+          <i className="fa fa-star"></i>
+          <i className="fa fa-star"></i>
+          <i className="fa fa-star-o"></i>
+          <i>   </i>
+          <i>   </i>
+          Overall Rating: { final_rating }
+        </div>
+      )
+    }
+    if (final_rating < 4.7) {
+      return(
+        <div>
+          <i className="fa fa-star"></i>
+          <i className="fa fa-star"></i>
+          <i className="fa fa-star"></i>
+          <i className="fa fa-star"></i>
+          <i className="fa fa-star-half"></i>
+          <i>   </i>
+          <i>   </i>
+          Overall Rating: { final_rating }
+        </div>
+      )
+    }
+    else {
+      return(
+        <div>
+          <i className="fa fa-star"></i>
+          <i className="fa fa-star"></i>
+          <i className="fa fa-star"></i>
+          <i className="fa fa-star"></i>
+          <i className="fa fa-star"></i>
+          <i>   </i>
+          <i>   </i>
+          Overall Rating: { final_rating }
+        </div>
+      )
+    }
+  }
+
   userShelves() {
     if (this.props.currentUser) {
       this.props.currentUser.bookshelves
@@ -231,11 +367,17 @@ class BookShowPage extends React.Component {
             <div id="book-show-info">
               <div className="title">
                 {this.props.books.title}
-                <br />
-                <i className="italics">{subtitle}</i>
               </div>
               <div>
-                By {this.props.books.author}
+                <br />
+                <div className="book-show-sub-title">
+                  By {this.props.books.author}
+                </div>
+                <br />
+                <div>
+                  { this.bookRating() }
+                </div>
+                <br />
               </div>
               <div>
                 {this.props.books.description}
