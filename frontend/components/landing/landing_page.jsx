@@ -159,7 +159,9 @@ class LandingPage extends React.Component {
               </div>
             </div>
             <div className="hover-black">
-              Search Bar PlaceHolder
+              <Link to='/books/new'>
+                Create a Book
+              </Link>
             </div>
             <div className="hover-black dropdown">
               <button className="drop-button">

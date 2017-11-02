@@ -345,7 +345,7 @@ class BookShowPage extends React.Component {
         <div id="book-show-main">
           <div id="book-show-page">
             <div id="book-show-cover">
-              <img src={this.props.books.cover} />
+              <img className="discovery-image" src={this.props.books.cover} />
               <div className="want-to-read dropdown">
                 <button className="drop-button">
                   <img src={window.wanna_read} />

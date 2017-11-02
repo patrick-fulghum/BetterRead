@@ -27,6 +27,7 @@ class BookFormPage extends React.Component {
     formData.append("book[genre]", this.state.genre);
     formData.append("book[cover]", file);
     this.props.createBook(formData);
+    // .then((book) => this.props.history.push(`/books/${book.id}`);
   }
 
   update(field) {
@@ -55,11 +56,13 @@ class BookFormPage extends React.Component {
           <div className="title">
             Add a New Book
           </div>
+          <br />
           <div>
             Note: Better_Read has over 4 books in its database already,
             so ensure the book you add is not already in the database.
             Please read the guidelines to the right carefully before submission.
           </div>
+          <br />
           <form onSubmit={this.handleSubmit} className='book-form-main'>
             <table>
               <tr>
@@ -121,7 +124,7 @@ class BookFormPage extends React.Component {
                 onChange={ this.updateFile }
                 />
             </label>
-            <button>Submit Book</button>
+            <button className="link-to-button book-button">Submit Book</button>
           </form>
         </div>
         <div className="book-form-right">

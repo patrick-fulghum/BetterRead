@@ -26,7 +26,7 @@ class SponsorBookPage extends React.Component {
       <div className="sponsored-book-container">
         <div>
           <Link to={`/books/${num}`}>
-            <img src={this.props.books[num].cover} />
+            <img className="discovery-image" src={this.props.books[num].cover} />
           </Link>
         </div>
         <div>

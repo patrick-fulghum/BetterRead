@@ -273,9 +273,6 @@ class HeaderPage extends React.Component {
                 </Link>
               </div>
             </div>
-            <div className="hover-black">
-              Search Bar PlaceHolder
-            </div>
             <div>
               <Link to="/login">Sign In</Link>
             </div>

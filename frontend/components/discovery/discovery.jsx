@@ -29,22 +29,22 @@ class DiscoveryPage extends React.Component {
       <ul className="book-listing">
         <li className="book-promotion">
           <Link to={`/books/${randomNums[0]}`}>
-            <img src={this.props.books[randomNums[0]].cover}/>
+            <img className="discovery-image" src={this.props.books[randomNums[0]].cover}/>
           </Link>
         </li>
         <li className="book-promotion">
           <Link to={`/books/${randomNums[1]}`}>
-            <img src={this.props.books[randomNums[1]].cover}/>
+            <img className="discovery-image" src={this.props.books[randomNums[1]].cover}/>
           </Link>
         </li>
         <li className="book-promotion">
           <Link to={`/books/${randomNums[2]}`}>
-            <img src={this.props.books[randomNums[2]].cover}/>
+            <img className="discovery-image" src={this.props.books[randomNums[2]].cover}/>
           </Link>
         </li>
         <li className="book-promotion">
           <Link to={`/books/${randomNums[3]}`}>
-            <img src={this.props.books[randomNums[3]].cover}/>
+            <img className="discovery-image" src={this.props.books[randomNums[3]].cover}/>
           </Link>
         </li>
         <div className="arrow-box">
@@ -52,7 +52,7 @@ class DiscoveryPage extends React.Component {
         </div>
         <li className="book-promotion">
           <Link to={`/books/${randomNums[4]}`}>
-            <img src={this.props.books[randomNums[4]].cover}/>
+            <img className="discovery-image" src={this.props.books[randomNums[4]].cover}/>
           </Link>
         </li>
       </ul>

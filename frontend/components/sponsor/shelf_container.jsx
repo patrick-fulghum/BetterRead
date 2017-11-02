@@ -1,8 +1,8 @@
 import { connect } from 'react-redux';
 import SponsorShelfPage from './sponsor_shelves';
 
-const mapStateToProps = () => ({
-
+const mapStateToProps = (state, ownProps) => ({
+  books: state.books
 });
 
 const mapDispatchToProps = () => ({
