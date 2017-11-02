@@ -1,5 +1,5 @@
 class Bookshelf < ApplicationRecord
-  validates :type, :owner_id, presence: true
+  validates :category, :owner_id, presence: true
 
   has_many :bookshelf_items,
   primary_key: :id,

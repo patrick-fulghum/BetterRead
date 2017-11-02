@@ -266,3 +266,29 @@ review15 = Review.create!(
   body: "I like a good space opera, but the writing in this book was so poor and the plot holes so massive, I just could not finish it",
   rating: 1
 )
+
+bookshelf1 = Bookshelf.create!(
+  owner_id: user1.id,
+  category: "custom_shelf",
+)
+
+bookshelf_item1 = BookshelfItem.create!(
+  book_id: book1.id,
+  bookshelf_id: bookshelf1.id,
+)
+bookshelf_item2 = BookshelfItem.create!(
+  book_id: book2.id,
+  bookshelf_id: bookshelf1.id,
+)
+bookshelf_item3 = BookshelfItem.create!(
+  book_id: book3.id,
+  bookshelf_id: bookshelf1.id,
+)
+bookshelf_item4 = BookshelfItem.create!(
+  book_id: book4.id,
+  bookshelf_id: bookshelf1.id,
+)
+bookshelf_item5 = BookshelfItem.create!(
+  book_id: book5.id,
+  bookshelf_id: bookshelf1.id,
+)

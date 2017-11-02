@@ -7,6 +7,7 @@ class BookShowPage extends React.Component {
   constructor(props) {
     super(props);
     this.bookReview = this.bookReview.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentDidMount() {
@@ -19,6 +20,10 @@ class BookShowPage extends React.Component {
     if (this.props.books && this.props.books.id != currentUrl) {
       this.props.fetchBook(currentUrl);
     }
+  }
+
+  handleSubmit() {
+
   }
 
   allBookReviews() {
@@ -169,6 +174,25 @@ class BookShowPage extends React.Component {
     }
   }
 
+  userShelves() {
+    if (this.props.currentUser) {
+      this.props.currentUser.bookshelves
+    }
+    return (
+      <div className="dropdown-links">
+        <Link to="construction">
+          currently-reading
+        </Link>
+        <Link to="construction">
+          read
+        </Link>
+        <Link to="construction">
+          want-to-read
+        </Link>
+      </div>
+    );
+  }
+
   render(){
     let subtitle;
     if (this.props.books &&
@@ -180,12 +204,11 @@ class BookShowPage extends React.Component {
           <div id="book-show-page">
             <div id="book-show-cover">
               <img src={this.props.books.cover} />
-              <div className="want-to-read">
-                <button>
-                  <Link to="/construction">
-                    <img src={window.wanna_read} />
-                  </Link>
+              <div className="want-to-read dropdown">
+                <button className="drop-button">
+                  <img src={window.wanna_read} />
                 </button>
+                { this.userShelves() }
               </div>
               <div id="book-rating-title">
                 Rate This Book
