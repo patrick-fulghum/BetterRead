@@ -6,12 +6,14 @@ class BookFormPage extends React.Component {
   constructor(props) {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.updateFile = this.updateFile.bind(this);
     this.state = {
       title: "",
       author: "",
       description: "",
-      coverFile: null,
-      coverUrl: null
+      genre: "",
+      imageFile: null,
+      imageUrl: null
     }
   }
 
@@ -19,11 +21,12 @@ class BookFormPage extends React.Component {
     e.preventDefault();
     let file = this.state.imageFile;
     let formData = new FormData();
-    formData.append("book[title]", file);
-    formData.append("book[author]", file);
-    formData.append("book[description]", file);
+    formData.append("book[title]", this.state.title);
+    formData.append("book[author]", this.state.author);
+    formData.append("book[description]", this.state.description);
+    formData.append("book[genre]", this.state.genre);
     formData.append("book[cover]", file);
-    createBook(formData);
+    this.props.createBook(formData);
   }
 
   update(field) {
@@ -39,7 +42,7 @@ class BookFormPage extends React.Component {
       this.setState({ imageUrl: reader.result, imageFile: file });
     };
     if (file) {
-      fileReader.readAsDataURL(file);
+      reader.readAsDataURL(file);
     } else {
       this.setState({ imageUrl:"", imageFile: null });
     }
@@ -71,7 +74,16 @@ class BookFormPage extends React.Component {
                 />
             </label>
             <label>Description
-              <textarea />
+              <textarea
+                type="text"
+                onChange={this.update('description')}
+                />
+            </label>
+            <label>Genre
+              <input
+                type="text"
+                onChange={this.update('genre')}
+                />
             </label>
             <label> Upload an Image
               <input
@@ -79,7 +91,7 @@ class BookFormPage extends React.Component {
                 onChange={ this.updateFile }
                 />
             </label>
-
+            <button>Submit Book</button>
           </form>
         </div>
         <div className="book-form-right">

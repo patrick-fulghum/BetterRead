@@ -6,13 +6,14 @@ export const fetchBook = (bookId) => {
 };
 
 export const createBook = (formData) => {
+  debugger
   return $.ajax({
-    method: "POST",
     url: `api/books`,
-    dataType: "json",
+    method: "POST",
     contentType: false,
     processData: false,
-    data: { formData },
+    dataType: "json",
+    data: formData,
   });
 };
 

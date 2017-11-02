@@ -39,7 +39,6 @@ class BookShowPage extends React.Component {
   }
 
   bookReview(num) {
-    debugger
     let review = this.props.books.reviews[num];
     let reviewer = this.props.users[review.author_id].name;
     let creation = String(new Date(review.created_at)).slice(4,15);
