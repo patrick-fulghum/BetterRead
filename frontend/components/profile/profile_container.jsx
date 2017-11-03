@@ -1,16 +1,17 @@
 import { connect } from 'react-redux';
 import ProfilePage from './profile';
+import { fetchUsers } from '../../actions/user_actions';
 
 const mapStateToProps = (state, ownProps) => {
-  debugger
   return ({
-
+    currentUser: state.session.currentUser,
+    users: state.users,
   });
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return ({
-
+    fetchUsers: () => dispatch(fetchUsers()),
   });
 };
 
