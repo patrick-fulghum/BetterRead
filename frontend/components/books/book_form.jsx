@@ -17,6 +17,18 @@ class BookFormPage extends React.Component {
     }
   }
 
+  renderErrors() {
+    return (
+      <ul className="book-creation-errors">
+        { this.props.errors.map((err, index) => (
+          <li key={index}>
+            { err }
+            </li>
+        ))}
+      </ul>
+    );
+  }
+
   handleSubmit(e) {
     e.preventDefault();
     let file = this.state.imageFile;
@@ -26,11 +38,9 @@ class BookFormPage extends React.Component {
     formData.append("book[description]", this.state.description);
     formData.append("book[genre]", this.state.genre);
     formData.append("book[cover]", file);
-    this.props.createBook(formData).then(book => {
-      debugger
-      return this.props.history.push('/')
-    });
-    // .then((book) => this.props.history.push(`/books/${book.id}`);
+    this.props.createBook(formData).then(function (book) {
+      return this.props.history.push(`/books/${book.book.id}`)
+    }.bind(this));
   }
 
   update(field) {
@@ -70,7 +80,14 @@ class BookFormPage extends React.Component {
             <table>
               <tr>
                 <td>
-                  <label for="book-form-title">Title
+                  <label htmlFor="book-form-errors">
+                  </label>
+                  { this.renderErrors }
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label htmlFor="book-form-title">Title
                   </label>
                 </td>
                 <td>
@@ -83,7 +100,7 @@ class BookFormPage extends React.Component {
               </tr>
               <tr>
                 <td>
-                  <label for="book-form-author">Author
+                  <label htmlFor="book-form-author">Author
                   </label>
                 </td>
                 <td>
@@ -96,7 +113,7 @@ class BookFormPage extends React.Component {
               </tr>
               <tr>
                 <td>
-                  <label for="book-form-description">Description
+                  <label htmlFor="book-form-description">Description
                   </label>
                 </td>
                 <td>
@@ -109,7 +126,7 @@ class BookFormPage extends React.Component {
               </tr>
               <tr>
                 <td>
-                  <label for="book-form-genre">Genre
+                  <label htmlFor="book-form-genre">Genre
                   </label>
                 </td>
                 <td>

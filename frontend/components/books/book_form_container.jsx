@@ -5,7 +5,8 @@ import { createBook } from '../../actions/book_actions';
 const mapStateToProps = (state, ownProps) => {
   return ({
     books: state.books[ownProps.match.params.bookId],
-    users: state.users
+    users: state.users,
+    errors: state.errors.session,
   });
 };
 

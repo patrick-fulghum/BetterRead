@@ -21,9 +21,10 @@ export const clearErrors = () => ({
 export const login = user => dispatch => (
   APIUtil.login(user).then(user => (
     dispatch(receiveCurrentUser(user))
-  ), error => (
-    dispatch(receiveErrors(error.responseJSON))
-  ))
+  ), error => {
+    debugger
+    return dispatch(receiveErrors(error.responseJSON))
+  })
 );
 
 export const logout = () => dispatch => (

@@ -6,7 +6,6 @@ export const fetchBook = (bookId) => {
 };
 
 export const createBook = (formData) => {
-  debugger
   return $.ajax({
     url: `api/books`,
     method: "POST",

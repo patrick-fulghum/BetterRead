@@ -1,11 +1,10 @@
 class Api::BooksController < ApplicationController
   def create
     @book = Book.new(book_params)
-
     if @book.save
       render "api/books/show"
     else
-      render json: @book.errors.full_messages, status: 422
+      render json: ["Please complete all Fields."], status: 401
     end
   end
 
