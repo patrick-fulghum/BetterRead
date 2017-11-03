@@ -87,17 +87,20 @@ class SessionForm extends React.Component {
             <li>
               {this.renderErrors()}
             </li>
-            <li className="float-left sign-items">
-              <label className='block'>Name
-                <input
-                  type="text"
-                  value={this.state.name}
-                  onChange={this.update('name')}
-                  placeholder="Name"
-                  className="block"
-                  />
-              </label>
-            </li>
+            { this.props.location.pathname === '/signup' ?
+              <li className="float-left sign-items">
+                <label className='block'>Name
+                  <input
+                    type="text"
+                    value={this.state.name}
+                    onChange={this.update('name')}
+                    placeholder="Name"
+                    className="block"
+                    />
+                </label>
+              </li> :
+              <li></li>
+             }
             <li className="float-left sign-items">
               <label className='block'>Email Address
                 <input
@@ -116,6 +119,7 @@ class SessionForm extends React.Component {
                   value={this.state.password}
                   onChange={this.update('password')}
                   className="block"
+                  placeholder="password"
                   />
               </label>
             </li>

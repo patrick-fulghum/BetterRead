@@ -26,7 +26,10 @@ class BookFormPage extends React.Component {
     formData.append("book[description]", this.state.description);
     formData.append("book[genre]", this.state.genre);
     formData.append("book[cover]", file);
-    this.props.createBook(formData);
+    this.props.createBook(formData).then(book => {
+      debugger
+      return this.props.history.push('/')
+    });
     // .then((book) => this.props.history.push(`/books/${book.id}`);
   }
 

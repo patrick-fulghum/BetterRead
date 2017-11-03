@@ -20,6 +20,7 @@
   background-size: cover;
 }
 
+
 .float-left {
   float: left;
 }
@@ -93,6 +94,7 @@
 }
 
 .landing-login-form-ul {
+  padding-top: 20px;
   list-style: none;
   display: flex;
 
@@ -124,7 +126,6 @@
 }
 
 #landing-header {
-  padding-top: 10px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -161,6 +162,7 @@
   outline: none;
   padding: 14px 16px;
   background-color: inherit;
+  font-size: 16px;
 }
 
 .dropdown-links  {
@@ -269,7 +271,7 @@
 
 .session-logo {
   height: 43px;
-  width: 197px;
+  width: 167px;
 }
 
 .book-listing {
@@ -572,11 +574,11 @@ label.star:before {
 }
 
 .logo {
-  height: 43px;
+  height: 63px;
   width: 197px;
   padding-left: 20px;
   padding-top: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .shelf-image {

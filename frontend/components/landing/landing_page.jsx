@@ -158,6 +158,22 @@ class LandingPage extends React.Component {
                 </Link>
               </div>
             </div>
+            <div className="hover-black dropdown">
+              <button className="drop-button">
+                Create  <i className="fa fa-caret-down"></i>
+              </button>
+              <div className="dropdown-links">
+                <Link to="/construction">
+                  Book
+                </Link>
+                <Link to="/construction">
+                  Shelf
+                </Link>
+                <Link to="/construction">
+                  Review
+                </Link>
+              </div>
+            </div>
             <div className="hover-black">
               <Link to='/books/new'>
                 Create a Book
@@ -197,7 +213,7 @@ class LandingPage extends React.Component {
         <div id="top-level-landing">
           <div id="landing-header">
             <Link to="/">
-              <img className="logo" src={window.logo} />
+              <img className="logo" id="not-logged-in-logo" src={window.logo} />
             </Link>
             <ul className="landing-login-form-ul">
               <li>
