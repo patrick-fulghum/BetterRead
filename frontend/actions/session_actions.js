@@ -18,12 +18,12 @@ export const clearErrors = () => ({
   type: CLEAR_ERRORS,
 });
 
-export const login = user => dispatch => (
-  APIUtil.login(user).then(user => (
+export const login = otherUser => dispatch => (
+  APIUtil.login(otherUser).then(user => (
     dispatch(receiveCurrentUser(user))
-  ), error => {
-    return dispatch(receiveErrors(error.responseJSON))
-  })
+  ), error => (
+    dispatch(receiveErrors(error.responseJSON))
+  ))
 );
 
 export const logout = () => dispatch => (
@@ -32,8 +32,8 @@ export const logout = () => dispatch => (
   ))
 );
 
-export const signup = user => dispatch => (
-  APIUtil.signup(user).then(user => (
+export const signup = otherUser => dispatch => (
+  APIUtil.signup(otherUser).then(user => (
     dispatch(receiveCurrentUser(user))
   ), error => (
     dispatch(receiveErrors(error.responseJSON))
