@@ -178,5 +178,3 @@ To run this on localhost:3000, do the following:
 * Add books to user shelves, as well as create custom shelves.
 
 * Robust Profile page displaying users shelves.
-
-Make sure to allot at least 3 hours to write your readme.
