@@ -4,7 +4,7 @@
 
 ## The better place for discovering your next favorite book!
 
-This repository contains the source code for the better-read application, a clone of GoodReads, hosted on Heroku. See the live app at the following link: [better-read](https://better-read.herokuapp.com/?#/). The overall structure of the application has been written in a rails project. The back-routes are within config/routes.rb, the frontend routes are within frontend/components/app.jsx. Rather than utilizing the traditional model view controller system of Rails, this application reduces the view component to only a few lines of jbuilder. This jbuilder will serve up the data as a javascript object to the frontend. The frontend is written in JavaScript using a React to render components to the page, and Redux to serve the state to the React component.
+This repository contains the source code for the better-read application, a clone of GoodReads, hosted on Heroku. See x`xthe live app at the following link: [better-read](https://better-read.herokuapp.com/?#/). The overall structure of the application has been written in a rails project. The back-routes are within config/routes.rb, the frontend routes are within frontend/components/app.jsx. Rather than utilizing the traditional model view controller system of Rails, this application reduces the view component to only a few lines of jbuilder. This jbuilder will serve up the data as a javascript object to the frontend. The frontend is written in JavaScript using a React to render components to the page, and Redux to serve the state to the React component.
 
 
 
@@ -40,7 +40,7 @@ The structure of the tables can be seen below, and while it is omitted in each t
 ### bookshelves
 
 | id        | owner_id           | category  |
-| ------------- |:-------------:| -----:| -----:|
+| ------------- |:-------------:| -----:|
 | primary-key     | users-foreign-key | have-read, will-read etc. |
 
 ### reviews
