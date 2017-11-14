@@ -51,15 +51,15 @@ class QuotePage extends React.Component {
 
         </div>
         <div className="quote-links">
-          <Link to="/construction">Best Quotes</Link>
-          <Link to="/construction">Love Quotes</Link>
-          <Link to="/construction">Inspirational Quotes</Link>
-          <Link to="/construction">Funny Quotes</Link>
-          <Link to="/construction">Motivational Quotes</Link>
-          <Link to="/construction">Life Quotes</Link>
-          <Link to="/construction">Friends Quotes</Link>
-          <Link to="/construction">Positive Quotes</Link>
-          <Link to="/construction">More Quotes</Link>
+          <Link to="/">Best Quotes</Link>
+          <Link to="/">Love Quotes</Link>
+          <Link to="/">Inspirational Quotes</Link>
+          <Link to="/">Funny Quotes</Link>
+          <Link to="/">Motivational Quotes</Link>
+          <Link to="/">Life Quotes</Link>
+          <Link to="/">Friends Quotes</Link>
+          <Link to="/">Positive Quotes</Link>
+          <Link to="/">More Quotes</Link>
         </div>
         </div>
       );
