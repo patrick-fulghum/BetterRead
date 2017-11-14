@@ -322,13 +322,13 @@ class BookShowPage extends React.Component {
     }
     return (
       <div className="dropdown-links">
-        <Link to="construction">
+        <Link to="/">
           currently-reading
         </Link>
-        <Link to="construction">
+        <Link to="/">
           read
         </Link>
-        <Link to="construction">
+        <Link to="/">
           want-to-read
         </Link>
       </div>

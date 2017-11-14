@@ -20,7 +20,6 @@ const App = () => (
     <Route exact path='/books/:bookId' component={BookShowContainer} />
     <Route exact path='/books/new' component={BookFormContainer} />
     <Route exact path='/profile' component={ProfilePageContainer} />
-    <Route path="/construction" component={Construct} />
     <AuthRoute path="/signup" component={SessionFormContainer} />
     <AuthRoute path="/login" component={SessionFormContainer} />
     <Route path='/' component={FooterPageContainer} />

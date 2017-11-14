@@ -9,13 +9,14 @@ class FooterPage extends React.Component {
           <i className="fa fa-users"></i>
         </div>
         <div>
-          <Link to='/construction'>About Me</Link>
+          <a href="http://www.patrick-fulghum.club/">About Me</a>
         </div>
         <div>
-          <Link to='/construction'>Github</Link>
+          <a href="https://github.com/patrick-fulghum">Github</a>
         </div>
         <div>
-          <Link to='/construction'>Linkin</Link>
+          <a href="https://www.linkedin.com/in/patrick-fulghum-393990104/">
+            linkedin</a>
         </div>
       </div>
     );

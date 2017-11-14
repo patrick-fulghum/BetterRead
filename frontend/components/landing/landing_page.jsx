@@ -87,7 +87,7 @@ class LandingPage extends React.Component {
             <Link to="/" className="hover-black">
               Home
             </Link>
-            <Link to="/construction" className="hover-black">
+            <Link to="/" className="hover-black">
               My Books
             </Link>
             <div className="hover-black dropdown">
@@ -95,31 +95,31 @@ class LandingPage extends React.Component {
                 Browse <i className="fa fa-caret-down"></i>
               </button>
               <div className="dropdown-links">
-                <Link to="/construction">
+                <Link to="/">
                   Recommendations
                 </Link>
-                <Link to="/construction">
+                <Link to="/">
                   Deals
                 </Link>
-                <Link to="/construction">
+                <Link to="/">
                   Choice Awards
                 </Link>
-                <Link to="/construction">
+                <Link to="/">
                   Giveaways
                 </Link>
-                <Link to="/construction">
+                <Link to="/">
                   New Releases
                 </Link>
-                <Link to="/construction">
+                <Link to="/">
                   Lists
                 </Link>
-                <Link to="/construction">
+                <Link to="/">
                   News & Interviews
                 </Link>
-                <Link to="/construction">
+                <Link to="/">
                   Explore
                 </Link>
-                <Link to="/construction">
+                <Link to="/">
                   Blog
                 </Link>
               </div>
@@ -129,31 +129,31 @@ class LandingPage extends React.Component {
                 Community  <i className="fa fa-caret-down"></i>
               </button>
               <div className="dropdown-links">
-                <Link to="/construction">
+                <Link to="/">
                   Groups
                 </Link>
-                <Link to="/construction">
+                <Link to="/">
                   Discussions
                 </Link>
-                <Link to="/construction">
+                <Link to="/">
                   Quotes
                 </Link>
-                <Link to="/construction">
+                <Link to="/">
                   Ask the Author
                 </Link>
-                <Link to="/construction">
+                <Link to="/">
                   Trivia
                 </Link>
-                <Link to="/construction">
+                <Link to="/">
                   Quizzes
                 </Link>
-                <Link to="/construction">
+                <Link to="/">
                   Creative Writing
                 </Link>
-                <Link to="/construction">
+                <Link to="/">
                   People
                 </Link>
-                <Link to="/construction">
+                <Link to="/">
                   Events
                 </Link>
               </div>
@@ -163,13 +163,13 @@ class LandingPage extends React.Component {
                 Create  <i className="fa fa-caret-down"></i>
               </button>
               <div className="dropdown-links">
-                <Link to="/construction">
+                <Link to="/">
                   Book
                 </Link>
-                <Link to="/construction">
+                <Link to="/">
                   Shelf
                 </Link>
-                <Link to="/construction">
+                <Link to="/">
                   Review
                 </Link>
               </div>
@@ -193,16 +193,16 @@ class LandingPage extends React.Component {
                 </Link>
               </div>
             </div>
-            <Link to="/construction" className="padding-left-a-bit">
+            <Link to="/" className="padding-left-a-bit">
               <i className="fa fa-bell"></i>
             </Link>
-            <Link to="/construction">
+            <Link to="/">
               <i className="fa fa-comments"></i>
             </Link>
-            <Link to="/construction">
+            <Link to="/">
               <i className="fa fa-envelope"></i>
             </Link>
-            <Link to="/construction">
+            <Link to="/">
               <i className="fa fa-users"></i>
             </Link>
           </div>
